@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Apparel — Clothing Boutique</title>
+  <link rel="icon" href="/assets/LOGO.png" type="image/png">
+<style>
+  body {
+    background-color:rgb(114, 127, 82);
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <img src="/assets/LOGO.png" alt="Logo" width="100" height="100">
+        <nav style="display:flex; gap: 20px; align-items: center;">
+      <a href="/index.html">HOME</a>
+      <a href="/pages/about.html">ABOUT US</a> 
+    <select onchange="location = this.value;">
+      <option value="">-- Services --</option>
+      <option value="/pages/design.html">Design</option>
+      <option value="/pages/orders.html">Orders</option>
+    </select>
+    <a href="/pages/contact.html">CONTACT US</a>
+    </nav>
+    <br>
+    <p>
+      Welcome to Fashion Apparel, your go-to destination for stylish and affordable clothing. 
+      Explore our latest collections and find the perfect outfit for any occasion.
+    </p>
+    <br>
+<button> <a href="/pages/register.html">Join Us</a></button>
+<br>
+<form action="/pages/about.html" method="get">
+        <h2>Log In</h2>
+        <table>
+            <tr>
+                <td>
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required> 
+                </td>
+            </tr>
+            <td>
+                <tr>
+                   <button type="submit">Log In</button>  
+                </tr>
+            </td>
+        </table>
+        
+    </form>
+  <br>
+  <br>
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:800">FashionApparel</div>
+        <div class="muted">Simple clothing, thoughtful design.</div>
+      </div>
+
+      <div style="text-align:center">
+        <div class="muted">&copy; FashionApparel 2025</div>
+        <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

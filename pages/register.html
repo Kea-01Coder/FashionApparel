@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" href="/assets/LOGO.png" type="image/png">
+<style>
+  body {
+    background-color:rgb(114, 127, 82);
+  }
+</style>
+</head>
+
+<header>
+  <img src="/assets/LOGO.png" alt="Logo" width="100" height="100">
+        <nav style="display:flex; gap: 20px; align-items: center;">
+        <a href="/index.html">HOME</a>
+        <a href="/pages/register.html">Register</a>
+    </nav>
+<body>
+    <form action="/pages/registered.html" method="get">
+        <h2>Register</h2>
+        <table>
+            <tr>
+                <td>
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required> 
+                </td>
+            </tr>
+            <td>
+                <tr>
+                   <button type="submit">Register</button>  
+                </tr>
+            </td>
+        </table>
+    </form>
+
+    <footer>
+    <div class="container footer-grid">
+      <div>
+        <div style="font-weight:800">FashionApparel</div>
+        <div class="muted">Simple clothing, thoughtful design.</div>
+      </div>
+
+      <div style="text-align:center">
+        <div class="muted">&copy; FashionApparel 2025</div>
+        <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/LOGO.png" type="image/png">
+    <style>
+  body {
+    background-color:rgb(114, 127, 82);
+  }
+</style>
+</head>
+
+<body>
+    <header>
+      <img src="/assets/LOGO.png" alt="Logo" width="100" height="100">
+        <nav style="display:flex; gap: 20px; align-items: center;">
+            <a href="/index.html">HOME</a>
+            <a href="/pages/about.html">ABOUT US</a>
+          
+            <select onchange="location = this.value;">
+             <option value="">-- Services --</option>
+             <option value="/pages/design.html">Design</option>
+             <option value="/pages/orders.html">Orders</option>
+            </select>
+
+            <a href="/pages/contact.html">CONTACT US</a>
+        </nav>
+
+         <div class="container nav">
+      <div class="brand">
+        <div class="logo">FA</div>
+        <div>
+          <div style="font-weight:800">FASHIONAPPAREL</div>
+          <div class="muted" style="font-size:0.86rem">Modern clothing & essentials</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#Jackets">Jackets</a></li>
+          <li>
+           <select name="Men" onchange="location = this.value;">
+           <option value="">-- MEN --</option>
+           <option value="#Men Pants">Pants</option>
+           <option value="#Men Shirts">Shirts</option>
+           </select>
+
+           <select name="Women" onchange="location = this.value;">
+            <option value="">-- WOMEN --</option>
+            <option value="#Women Dresses">Dresses</option>
+            <option value="#Women Pants">Pants</option>
+            <option value="#Women Shirts">Shirts</option>
+            <option value="Women Skirts">Skirts</option>
+            <option value="#Women Jerseys">Jerseys</option>
+           </select>
+          </li>
+          <li><a href="#new">New</a></li>
+          <li><a href="#best">Best Sellers</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+   <main class="container">
+
+      <section class="hero section">
+      <div class="hero-inner">
+        <div class="eyebrow">NEW SEASON</div>
+        <h1>Clean, comfortable styles crafted for everyday life</h1>
+        <p class="lead">Discover our latest collection of wardrobe staples. Minimal design, high-quality fabrics, and inclusive sizing — ready to wear, right now.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#new">Shop Collections</a>
+          <a class="btn btn-outline" href="#best">Explore Best Sellers</a>
+        
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <img src="/assets/download.jpeg" alt="Man and woman wearing casual clothes"/>
+      </div>
+    </section>
+
+    <section id="best" class="section">
+      <div class="section-head">
+        <h2 style="margin:0">Best Sellers</h2>
+        <div class="muted">Loved by customers</div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped shirt" width="300" height="300"/></div>
+          <div class="product-body">
+            <h3 class="product-title">Striped Shirt</h3>
+            <div class="product-price">R329</div>
+            <p class="product-desc">Smart-casual shirt for work or weekend.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+<br>
+<br>
+    <section id="new" class="section">
+      <div class="section-head">
+        <h2 style="margin:0">New Arrivals</h2>
+        <div class="muted">Just landed this week</div>
+      </div>
+  
+      <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Men's Clothing/Shirts/kahuku-ivy-green-985066.jpg" alt="kahuku-ivy-green" height="300" width="300"/></div>
+          <div class="product-body">
+            <h3 class="product-title">Polo Shirt</h3>
+            <div class="product-price">R329</div>
+            <p class="product-desc">Smart-casual shirt for work or weekend.</p>
+          </div>
+        </article>
+      </div>
+      <br>  
+      <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Jackets/razo-night-sky-512797.jpg" alt="Blue Warm Jacket" width="300" height="300"/></div>
+          <div class="product-body">
+            <h3 class="product-title">Razo-Night-Sky Jacket</h3>
+            <div class="product-price">R569</div>
+            <p class="product-desc">A good jacket for rainy or windy weather</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <br>
+    <br>
+     <section id="men" class="section">
+      <div class="section-head">
+        <h2 style="margin:0">Men's Collections</h2>
+        <div class="muted">Hand-picked for the season</div>
+      </div>
+        
+      <section id="Men Shirts">
+      <div class="grid">
+        <article class="card">          
+          <div class="product-media"><img src="/assets/Men's Clothing/Shirts/pupukea-vintage-ecru-411600.jpg" alt="Relaxed tee" width="300" height="300"/></div>
+          <div class="product-body">
+            <h4 class="product-title">Graphic Tee</h4>
+            <div class="product-price">R310</div>
+            <p class="product-desc">Soft cotton graphic tee</p>
+          </div>
+        </article>
+        </div>
+        <br>
+       <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Men's Clothing/Shirts/T-Shirt(2).jpeg" alt="Relaxed tee"  /></div>
+          <div class="product-body">
+            <h3 class="product-title">Everyday Tee</h3>
+            <div class="product-price">R249</div>
+            <p class="product-desc">Soft cotton tee with a relaxed fit.</p>
+          </div>
+        </article>
+        </div>
+        <br>
+        <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Men's Clothing/Shirts/T-Shirt(3)" alt="Relaxed tee" width="300" height="500" /></div>
+          <div class="product-body">
+            <h3 class="product-title">Everyday Tee</h3>
+            <div class="product-price">R200</div>
+            <p class="product-desc">Soft cotton tee with a relaxed fit.</p>
+          </div>
+        </article>
+        </div>
+        <br>
+        <div class="grid">
+        <article class="card">
+          <div class="product-media"><img src="/assets/Men's Clothing/Shirts/T-Shirt.jpeg" alt="Relaxed tee"  /></div>
+          <div class="product-body">
+            <h3 class="product-title">Everyday Tee</h3>
+            <div class="product-price">R230</div>
+            <p class="product-desc">Soft cotton tee with a relaxed fit.</p>
+          </div>
+        </article>
+        </div>
+      </section>
+        <br>
+        <br>
+      <section id="Men Pants">
+        <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Men's Clothing/Pants/bagaat-dark-lake-454757.jpg" alt="Dark Lake Pants" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Dark Lake Shorts</h4>
+             <div class="product-price">R420</div>
+             <p class="product-desc">Linen Fabric</p>
+            </div>
+          </article>
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Men's Clothing/Pants/kawailoa-mocha-brown-8107056.jpg" alt="Mocha Brown Pants" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Mocha Brown Shorts</h4>
+             <div class="product-price">R499</div>
+             <p class="product-desc">Linen Fabric</p>
+            </div>
+          </article>
+         </div>
+
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Men's Clothing/Pants/Brown Pants.jpg" alt="Brown Pants" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Brown Formal Pants</h4>
+             <div class="product-price">R620</div>
+             <p class="product-desc"> Fine Formal Pants</p>
+            </div>
+          </article>
+         </div>
+
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Men's Clothing/Pants/kotomo-ivy-green-481782.jpg" alt="Ivy Green Pants" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Ivy Green Pants</h4>
+             <div class="product-price">R600</div>
+             <p class="product-desc">Pants great for outside activities</p>
+            </div>
+          </article>
+         </div>
+          <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Men's Clothing/Pants/kotomo-natural-140929.jpg" alt="The Original Kotoma Pants" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Kotomo Natural Pants</h4>
+             <div class="product-price">R600</div>
+             <p class="product-desc">Pants great for outside activities</p>
+            </div>
+          </article>
+         </div>
+      </section>
+    </section>
+
+    <br>
+    <br>
+      <section id="women" class="section">
+        <div class="section-head">
+          <h2 style="margin:0">Women's Collections</h2>
+         <div class="muted">Hand-picked for the season</div>
+        </div>
+
+        <section id="Women Shirts">
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped tee" width="300" height="300"/></div>
+            <div class="product-body">
+             <h4 class="product-title">Mixed Striped Shirt</h4>
+             <div class="product-price">R300</div>
+             <p class="product-desc">Soft cotton striped tee</p>
+            </div>
+          </article>
+         </div>
+          <br> 
+         <div class="grid">
+          <article class="card">
+           <div class="product-media"><img src="/assets/Women's Clothing/Shirts/molln-off-white-2917641.webp" alt="Molln Off White tee" width="300" height="300"/></div>
+           <div class="product-body">
+            <h3 class="product-title">Molln White Tee</h3>
+            <div class="product-price">R249</div>
+            <p class="product-desc">Soft cotton graphic tee</p>
+           </div>
+          </article>   
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">
+           <div class="product-media"><img src="/assets/Women's Clothing/Shirts/niu-black-2773336.webp" alt="Black Shirt" width="300" height="300"/></div>
+           <div class="product-body">
+            <h3 class="product-title">Black Shirt For Women</h3>
+            <div class="product-price">R360</div>
+            <p class="product-desc">Soft Cotton Black tee as a fashion piece</p>
+           </div>
+          </article>   
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">
+           <div class="product-media"><img src="/assets/Women's Clothing/Shirts/niu-ecru-1200422.webp" alt="Ecru/White tee" width="300" height="320"/></div>
+           <div class="product-body">
+            <h3 class="product-title">White Shirt For Women</h3>
+            <div class="product-price">R360</div>
+            <p class="product-desc">Soft Cotton White tee as a fashion piece</p> 
+          </div>
+          </article>   
+         </div>
+      </section>
+      <br>
+      <section id="Women Dresses">
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Dresses/pollan-black-white-vichy-176015.webp" alt="pollan-black-white-vichy" width="300" height="300"/></div>
+            <div class="product-body">
+             <h4 class="product-title">Pollan Black White Vichy</h4>
+             <div class="product-price">R630</div>
+             <p class="product-desc">Black and White dress perfect for a sunny day</p>
+            </div>
+          </article>
+         </div>
+           <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Dresses/varpasalo-apple-red-599918.webp" alt="varpasalo-apple-red" width="300" height="300"/></div>
+            <div class="product-body">
+             <h4 class="product-title">Varpasalo Apple Red</h4>
+             <div class="product-price">R540</div>
+             <p class="product-desc">Apple Red dress perfect for sunny weather</p>
+            </div>
+          </article>
+         </div>
+      </section>
+      <br>
+      <br>
+      <section id="Women Pants">
+        <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Pants/kiritibati-sky-blue-979667.webp" alt="kiritibati-sky-blue" width="300" height="300"/></div>
+            <div class="product-body">
+             <h4 class="product-title">Kiritibati Sky Blue Jeans</h4>
+             <div class="product-price">R620</div>
+             <p class="product-desc">Denim Sky Blue Jean perfect for any wear</p>
+            </div>
+          </article>
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><video src="/assets/Women's Clothing/Pants/031948e0180d43e4b0f4c4c000aebd86.HD-720p-2.1Mbps-44920115.mp4" controls="" loop alt="" width="300" height="400"></video></div>
+            <div class="product-body">
+             <h4 class="product-title">Short Video Of how the Jean looks</h4>
+             <div class="product-price">R620</div>
+             <p class="product-desc">Denim Sky Blue Jean perfect for any wear</p>
+            </div>
+          </article>
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Pants/luhme-dusty-ochre-8018012.webp" alt="luhme-dusty-ochre" width="300" height="350"/></div>
+            <div class="product-body">
+             <h4 class="product-title">Luhme Dusty Ochre</h4>
+             <div class="product-price">R620</div>
+             <p class="product-desc">Luhme Dusty Corduroy Pants with a relaxed fit.</p>
+            </div>
+          </article>
+         </div>         
+      </section>
+
+      <br>
+      <br>
+      <section id="Women Skirts">
+        <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Skirts/aspo-light-khaki-560772.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Aspo Light Khaki</h4>
+             <div class="product-price">R520</div>
+             <p class="product-desc">Aspo Light Khaki skirt good for outings</p>
+            </div>
+          </article>
+         </div>
+
+         <br>
+
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Skirts/aspo-light-khaki-987244.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Light Khaki Skirt</h4>
+             <div class="product-price">R520</div>
+             <p class="product-desc">Light Khaki Skirt with a relaxed fit</p>
+            </div>
+          </article>
+         </div>
+
+         <br>
+
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Skirts/castlerock-toffee-888576.jpg" alt="castlerock-toffee" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Castlerock Toffee Skirt</h4>
+             <div class="product-price">R520</div>
+             <p class="product-desc">A skirt perfect for staying at home and going out</p>
+            </div>
+          </article>
+         </div>
+
+          <br>
+
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Skirts/jusaari-ultramarine-379885.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Ultramarine Skirt</h4>
+             <div class="product-price">R420</div>
+             <p class="product-desc">A Skirt made as a fashion piece</p>
+            </div>
+          </article>
+         </div>
+   
+         <br>
+  
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Skirts/kuratake-light-blue-884071.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Jean Skirt</h4>
+             <div class="product-price">R520</div>
+             <p class="product-desc">Denim Fabric</p>
+            </div>
+          </article>
+         </div>
+        </section>
+   
+        <br>
+        <br>
+        <section id="Women Jerseys">
+        <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Women's Clothing/Jerseys/salthill-cappuccino-455895.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">SaltHill Cappuccino Jersey</h4>
+             <div class="product-price">R560</div>
+             <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
+            </div>
+          </article>
+         </div>
+      </section>
+      </section>
+   
+      <br>
+   
+      <section id="Jackets" class="section">
+      <div class="section-head">
+        <h2 style="margin:0">Jackets</h2>
+        <div class="muted">Perfect for layering</div>
+      </div>
+      <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Jackets/bushmill-burnt-orange-8765726.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Burnt Orange Jacket</h4>
+             <div class="product-price">R1200</div>
+             <p class="product-desc">Jacket meant for fashion and warmth</p>
+            </div>
+          </article>
+         </div>
+         <br>
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Jackets/bushmill-dark-grey-6001754.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Dark Grey Jacket</h4>
+             <div class="product-price">R1200</div>
+             <p class="product-desc">Jacket meant for fashion and warmth</p>
+            </div>
+          </article>
+         </div>
+   
+         <br>
+         
+      <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Jackets/glenoe-light-khaki-210260.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">A Light Khaki Jacket</h4>
+             <div class="product-price">R1020</div>
+             <p class="product-desc">Jacket that serves as a jersey and a raincoat</p>
+            </div>
+          </article>
+         </div>
+
+         <br>
+   
+         <div class="grid">
+          <article class="card">          
+           <div class="product-media"><img src="/assets/Jackets/hoben-mustard-check-7388130.jpg" alt="" width="300" height="300"></div>
+            <div class="product-body">
+             <h4 class="product-title">Brown Checkered Jacket</h4>
+             <div class="product-price">R999</div>
+             <p class="product-desc">A nice color quoted jacket good for cold weather</p>
+            </div>
+          </article>
+         </div>
+    </section>
+  </main>
+<br>
+<br>
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div style="font-weight:800">FashionApparel</div>
+                <div class="muted">Simple clothing, thoughtful design.</div>
+            </div>
+
+            <div style="text-align:center">
+                <div class="muted">&copy; FashionApparel 2025</div>
+                <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

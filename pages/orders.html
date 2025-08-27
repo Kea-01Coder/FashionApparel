@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/LOGO.png" type="image/png">
+    <style>
+  body {
+    background-color:rgb(114, 127, 82);
+  }
+</style>
+</head>
+<body>
+    <header>
+      <img src="/assets/LOGO.png" alt="Logo" width="100" height="100">
+        <nav style="display:flex; gap: 20px; align-items: center;">
+            <a href="/index.html">HOME</a>
+            <a href="/pages/about.html">ABOUT US</a>
+          
+            <select onchange="location = this.value;">
+              <option value="">-- Services --</option>
+              <option value="/pages/design.html">Design</option>
+              <option value="/pages/orders.html">Orders</option>
+            </select>
+
+            <a href="/pages/contact.html">CONTACT US</a>
+        </nav>
+    </header>
+
+      <div class="container">
+        <h2>Checkout</h2>
+    
+        <p>Can only start working after JavaScript</p>
+        <!-- Cart Summary -->
+        <div class="section">
+          <h3>Your Cart</h3>
+          <table>
+            <tr>
+              <th>Item </th>
+              <th> Size </th>
+              <th> Qty </th>
+              <th> Price </th>
+              <th> Subtotal</th>
+            </tr>
+            <tr>
+              <p>Example</p>
+              <td>T-shirt</td>
+              <td> M </td>
+              <td> 2 </td>
+              <td> R150 </td>
+              <td> R300</td>
+            </tr>
+            <!-- More items... -->
+            <tr>
+              <td colspan="4" class="total">Total</td>
+              <td class="total">R300</td>
+            </tr>
+          </table>
+        </div>
+    
+        <!-- Shipping Info -->
+        <div class="section">
+          <h3>Shipping Information</h3>
+          <form action="">
+          <table>
+            <tr>
+                <td>
+                    <label>Full Name
+                     <input type="text" required>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Address
+                    <input type="text" required>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label>City
+                  <input type="text" required>
+                  </label>   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label>Postal Code
+                  <input type="text" required>
+                  </label> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <label>Country
+                 <input type="text" required>
+                 </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  <label>Phone
+                  <input type="text" required>
+                  </label>
+                </td>
+            </tr>
+          </table>
+        </form>
+        </div>
+    
+        <!-- Payment Info -->
+        <div class="section">
+          <h3>Payment Information</h3>
+          <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label>Card Number
+                        <input type="text" required>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Expiry Date
+                    <input type="text" placeholder="MM/YY" required>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>CVV
+                        <input type="text" required>
+                        </label>
+                    </td>
+                </tr>
+            </table>
+          </form>
+        </div>
+        <button type="submit">Place Order</button>
+      </div>
+      <br>
+      <br>
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div style="font-weight:800">FashionApparel</div>
+                <div class="muted">Simple clothing, thoughtful design.</div>
+            </div>
+
+            <div style="text-align:center">
+                <div class="muted">&copy; FashionApparel 2025</div>
+                <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
