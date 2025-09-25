@@ -16,13 +16,15 @@ Added a css page to add style, typography, layout and responsiveness
 
 Added 5 more images on the design page
 
+Added an image on the new Education page
+
 Feedback about lack of information in the READMe: Added information on my README file
 
 Feedback about code comments: Added code comments to certain sections of my code
 
 Feedback about missing information from the proposal: 
  *Added missing things such as sales on the home page
- *Added product education
+ *Added eco-friendly education
  *Added wireframes
 
 
