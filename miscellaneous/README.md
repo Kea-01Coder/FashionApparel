@@ -1,14 +1,26 @@
 # FashionApparel
 Clothing Store
 
+v1.1.0 (27 August 2025)
 Index.html serving as a home page
 
-Added images to make website more pleasing and aesthetic
+Added an about us page
 
-Updated the design page
+Added images to make website more pleasing and aesthet
+
+Added a service navigation with a design and orders page
+
+Added images to the design page
 
 Added pages for registration
 
+Added a contact page
+
+Instructions
+In order to see the registrations page you have to click the Join us button
+If the are any problems with the buttons, click directly on the word(s)
+
+V1.1.0 Update (26 September 2025)
 ChangeLog
 Added a new page called OrderSucces, which will tell the user that their order was successful
 
@@ -27,6 +39,11 @@ Feedback about missing information from the proposal:
  *Added eco-friendly education
  *Added wireframes
 
+SEE WEBSITE RESPONSIVE DESIGN SNIPPETS:
+../assets/DeviceResponsiveness/MobileResponsiveness
+../assets/DeviceResponsiveness/MobileLResponsiveness
+../assets/DeviceResponsiveness/TabletResponsiveness
+../assets/DeviceResponsiveness/LaptopResponsiveness
 
 References
 Patagonia, 2025. Shop Sustainable clothing. [Online] 

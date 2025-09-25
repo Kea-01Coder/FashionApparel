@@ -247,7 +247,7 @@ footer {
   margin-top: 4px;
 }
 
-/* Responsive */
+/* Responsive for all devices*/
 @media (max-width: 700px) {
   header, footer {
     max-width: 98vw;
