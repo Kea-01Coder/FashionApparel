@@ -403,10 +403,14 @@ footer {
 }
 
 /* Form responsiveness */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 iframe {
-  width: 100%;
-  max-width: 700px;
-  height: 900px;
+  max-width: 100%;
   border: none;
 }
 
