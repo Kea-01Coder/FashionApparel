@@ -401,3 +401,12 @@ footer {
 .section img:hover {
   transform: scale(1.03);
 }
+
+/* Form responsiveness */
+iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 900px;
+  border: none;
+}
+
