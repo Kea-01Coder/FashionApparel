@@ -61,6 +61,8 @@
     </div>
     </header>
 
+    <h2 id="welcomeMessage"></h2>
+    
    <main class="container">
 
       <section class="hero section">
@@ -547,5 +549,18 @@
             </div>
         </div>
     </footer>
+
+    
+  <script src="user.js"></script>
+  <script>
+    // Inline script just to update the name
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+      document.getElementById("welcomeMessage").textContent = "Welcome, " + loggedInUser + "!";
+    } else {
+      document.getElementById("welcomeMessage").textContent = "Welcome, Guest!";
+    }
+  </script>
+  
 </body>
 </html>
