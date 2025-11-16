@@ -112,28 +112,31 @@
         table.innerHTML = `
             <tr>
                 <th>Item</th>
-                <th>Image</th>
-                <th>Size</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Subtotal</th>
+                <th> Image</th>
+                <th> Size</th>
+                <th> Quantity</th>
+                <th> Price</th>
+                <th> Subtotal</th>
             </tr>
         `;
 
         let total = 0;
 
         cart.forEach(item => {
-            let subtotal = item.price * item.quantity;
+            let rawPrice = item.price.toString().replace("R", "");
+            let priceValue = parseFloat(rawPrice);
+            let subtotal = priceValue * item.qty;
             total += subtotal;
+
 
             table.innerHTML += `
                 <tr>
                     <td>${item.name}</td>
-                    <td><img src="${item.image}" width="60"></td>
-                    <td>${item.size}</td>
-                    <td>${item.quantity}</td>
-                    <td>R${item.price}</td>
-                    <td>R${subtotal}</td>
+                    <td> <img src="${item.image}" width="60"></td>
+                    <td> ${item.size}</td>
+                    <td> ${item.quantity}</td>
+                    <td> ${item.price}</td>
+                    <td> R${subtotal}</td>
                 </tr>
             `;
         });
