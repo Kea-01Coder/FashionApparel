@@ -6,151 +6,150 @@
     <title>Order</title>
     <link rel="icon" href="../assets/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
-  </head>
+</head>
+
 <body>
-    <header>
-      <img src="../assets/LOGO.png" alt="Logo" width="100" height="100">
-        <nav style="display:flex; gap: 20px; align-items: center;">
-            <a href="../index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-          
-            <select onchange="location = this.value;">
-              <option value="">Services</option>
-              <option value="design.html">Design</option>
-              <option value="orders.html">Orders</option>
-            </select>
-            <a href="EcoEdu.html">Eco-Education</a>
-            <a href="contact.html">CONTACT US</a>
-        </nav>
 
-        <div class="brand">
+<header>
+    <img src="../assets/LOGO.png" alt="Logo" width="100" height="100">
+    <nav style="display:flex; gap: 20px; align-items: center;">
+        <a href="../index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+
+        <select onchange="location = this.value;">
+            <option value="">Services</option>
+            <option value="design.html">Design</option>
+            <option value="orders.html">Orders</option>
+        </select>
+
+        <a href="EcoEdu.html">Eco-Education</a>
+        <a href="contact.html">CONTACT US</a>
+    </nav>
+
+    <div class="brand">
         <div style="text-align: center;">
-          <div>FASHION APPAREL</div>
-          <div class="muted">Modern clothing & essentials</div>
+            <div>FASHION APPAREL</div>
+            <div class="muted">Modern clothing & essentials</div>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-      <div class="container">
-        <h2>Checkout</h2>
-    
-        <p>Can only start working after JavaScript</p>
-        <!-- Cart Summary -->
-        <div class="section">
-          <h3>Your Cart</h3>
-          <table>
+
+<!-- MAIN PAGE CONTENT -->
+<div class="container">
+    <h2>Checkout</h2>
+
+    <!-- CART SECTION -->
+    <div class="section">
+        <h3>Your Cart</h3>
+
+        <table id="cartTable">
             <tr>
-              <th>Item </th>
-              <th> Size </th>
-              <th> Price </th>
-              <th> Subtotal</th>
+                <th>Item </th>
+                <th>Image </th>
+                <th>Size </th>
+                <th>Quantity </th>
+                <th>Price </th>
+                <th>Subtotal </th>
             </tr>
-            <!-- More items... -->
-            <tr>
-              <td colspan="4" class="total">Total</td>
-              <td class="total"></td>
-            </tr>
-          </table>
-        </div>
-    
-        <!-- Shipping Info -->
-        <div class="section">
-          <h3>Shipping Information</h3>
-          <form action="">
-          <table>
-            <tr>
-                <td>
-                    <label>Full Name
-                     <input type="text" required>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Address
-                    <input type="text" required>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <label>City
-                  <input type="text" required>
-                  </label>   
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <label>Postal Code
-                  <input type="text" required>
-                  </label> 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                 <label>Country
-                 <input type="text" required>
-                 </label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <label>Phone
-                  <input type="text" required>
-                  </label>
-                </td>
-            </tr>
-          </table>
-        </form>
-        </div>
-    
-        <!-- Payment Info -->
-        <div class="section">
-          <h3>Payment Information</h3>
-          <form action="">
+        </table>
+    </div>
+
+
+    <!-- SHIPPING INFO -->
+    <div class="section">
+        <h3>Shipping Information</h3>
+        <form>
             <table>
-                <tr>
-                    <td>
-                        <label>Card Number
-                        <input type="text" required>
-                        </label>
-                    </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <label>Expiry Date
-                    <input type="text" placeholder="MM/YY" required>
-                    </label>
-                  </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <label>CVV
-                        <input type="text" required>
-                        </label>
-                    </td>
-                </tr>
+                <tr><td><label>Full Name <input type="text"></label></td></tr>
+                <tr><td><label>Address <input type="text"></label></td></tr>
+                <tr><td><label>City <input type="text"></label></td></tr>
+                <tr><td><label>Postal Code <input type="text"></label></td></tr>
+                <tr><td><label>Country <input type="text"></label></td></tr>
+                <tr><td><label>Phone <input type="text"></label></td></tr>
             </table>
-          </form>
-        </div>
-        <button type="submit"><a href="OrderSuccess.html">Place Order</a></button>
-      </div>
-      <br>
-      <br>
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <div style="font-weight:800">FashionApparel</div>
-                <div class="muted">Simple clothing, thoughtful design.</div>
-            </div>
+        </form>
+    </div>
 
-            <div style="text-align:center">
-                <div class="muted">&copy; FashionApparel 2025</div>
-                <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
-            </div>
+
+    <!-- PAYMENT INFO -->
+    <div class="section">
+        <h3>Payment Information</h3>
+        <form>
+            <table>
+                <tr><td><label>Card Number <input type="text"></label></td></tr>
+                <tr><td><label>Expiry Date <input type="text" placeholder="MM/YY"></label></td></tr>
+                <tr><td><label>CVV <input type="text"></label></td></tr>
+            </table>
+        </form>
+    </div>
+
+    <button type="submit"><a href="OrderSuccess.html">Place Order</a></button>
+</div>
+
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <div style="font-weight:800">FashionApparel</div>
+            <div class="muted">Simple clothing, thoughtful design.</div>
         </div>
-    </footer>
+
+        <div style="text-align:center">
+            <div class="muted">&copy; FashionApparel 2025</div>
+            <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+        </div>
+    </div>
+</footer>
+
+<!-- CART SCRIPT — FULL FUNCTION BELOW -->
+<script>
+    function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let table = document.getElementById("cartTable");
+
+        // Reset table (keep header)
+        table.innerHTML = `
+            <tr>
+                <th>Item</th>
+                <th>Image</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        `;
+
+        let total = 0;
+
+        cart.forEach(item => {
+            let subtotal = item.price * item.quantity;
+            total += subtotal;
+
+            table.innerHTML += `
+                <tr>
+                    <td>${item.name}</td>
+                    <td><img src="${item.image}" width="60"></td>
+                    <td>${item.size}</td>
+                    <td>${item.quantity}</td>
+                    <td>R${item.price}</td>
+                    <td>R${subtotal}</td>
+                </tr>
+            `;
+        });
+
+        // TOTAL ROW
+        table.innerHTML += `
+            <tr>
+                <td colspan="5" class="total">Total</td>
+                <td class="total">R${total}</td>
+            </tr>
+        `;
+    }
+
+    // LOAD CART WHEN PAGE OPENS
+    loadCart();
+</script>
+
 </body>
 </html>
