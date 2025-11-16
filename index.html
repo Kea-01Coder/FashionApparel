@@ -29,17 +29,45 @@
           <div class="muted">Modern clothing & essentials</div>
         </div>
       </div>
+      </header>
+
+      <!-- Homepage Banner -->
+      <div class="home-banner">
+        <a href="assets/banner.avif" onclick="openLightbox('assets/banner.avif'); return false;">
+          <img src="assets/banner.avif" alt="Homepage Banner">
+        </a>
+
+        <div class="banner-text">
+          <h1>Welcome to Fashion Apparel</h1>
+          <p>Your Style • Your Identity</p>
+        </div>
+      </div>
+  
+      <!-- Lightbox Container -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>    
+        <img id="lightboxImg">
+      </div>
+
+      <section class="section">
+  <div class="section-head">
     <p>
       Welcome to Fashion Apparel, your go-to destination for stylish and affordable clothing. 
       Explore our latest collections and find the perfect outfit for any occasion.
-     </p>
-     <p>
-      JOIN US ON THIS MISSION AND RECIEVE AN EXCLUSIVE 20% DISCOUNT
+    </p>
+  <br>
+    <p>
+      <strong>JOIN US ON THIS MISSION AND RECEIVE AN EXCLUSIVE 20% DISCOUNT</strong>
     </p>
 
-    <br>
-<button> <a href="pages/register.html">Join Us</a></button>
-<br>
+    <button class="join-btn">
+      <a href="pages/register.html">Join Us</a>
+    </button>
+  </div>
+</section>
+
+
+    
 <!--Login form-->
 <form action="pages/about.html" method="get">
         <h2>Log In</h2>
@@ -89,6 +117,17 @@
 <script src="./Users.js"></script>
 <script>
   login(); // call after Users.js is loaded
+</script>
+
+<script>
+function openLightbox(imageSrc) {
+  document.getElementById("lightboxImg").src = imageSrc;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
 </script>
 
 </body>

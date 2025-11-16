@@ -414,3 +414,100 @@ iframe {
   border: none;
 }
 
+/* LIGHTBOX BACKDROP */
+.lightbox {
+  display: none;              /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Dark background */
+  justify-content: center;   
+  align-items: center;
+  z-index: 9999;              /* Always on top */
+  cursor: zoom-out;
+}
+
+/* IMAGE INSIDE LIGHTBOX */
+#lightboxImg {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  cursor: default;
+}
+
+.join-btn {
+  background-color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.join-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.join-btn:hover {
+  background-color: #444;
+}
+
+/* CLOSE BUTTON (X) */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+}
+
+.lightbox-close:hover {
+  color: #ccc;
+}
+
+
+/* Banner Section */
+.home-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: 20px;
+}
+
+.home-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Banner text */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+
