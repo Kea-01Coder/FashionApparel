@@ -90,6 +90,22 @@
             </div>
             <p><img src="../assets/Team.png" alt="Our Team" width="500" height="400"></p>
         </section>
+
+        <button class="accordion">What payment methods do you accept?</button>
+        <div class="panel">
+            <p>We accept Visa, Mastercard, EFT and Mobile Money payments.</p>
+        </div>
+
+        <button class="accordion">Do you offer delivery?</button>
+        <div class="panel">
+            <p>Yes, we deliver nationwide within 3–5 days.</p>
+        </div>
+
+        <button class="accordion">Are your clothes eco-friendly?</button>
+        <div class="panel">
+            <p>Yes! We use recycled fabrics and environmentally safe dyes.</p>
+        </div>
+
     </main>
     <footer>
         <div class="container footer-grid">
@@ -104,5 +120,18 @@
             </div>
         </div>
     </footer>
+
+<script>
+    let acc = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
+    }
+</script>
+
 </body>
 </html>

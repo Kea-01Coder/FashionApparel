@@ -510,4 +510,24 @@ iframe {
   margin-top: 10px;
 }
 
+/*Accordions*/
+.accordion {
+  background: #eee;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
+.panel {
+  padding: 10px;
+  display: none;
+  background: white;
+  border-left: 2px solid #444;
+  border-right: 2px solid #444;
+  border-bottom: 2px solid #444;
+}
