@@ -40,11 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const email = document.getElementById("email").value;
+  const username = document.getElementById("Loginusername").value;
+  const password = document.getElementById("Loginpassword").value;
+  const email = document.getElementById("Loginemail").value;
+
+  
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const found = users.find(user => user.username === username && user.password === password);
+  const found = users.find(user => user.Loginusername === username && user.Loginpassword === Loginpassword);
   if (found) {
     alert("Login successful!");
   } else {
