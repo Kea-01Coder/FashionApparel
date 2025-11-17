@@ -3,38 +3,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorMessage = document.getElementById('error-message');
 
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // prevent form from submitting
+        e.preventDefault(); // prevent default form submission
 
         const username = document.getElementById('username').value.trim();
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value.trim();
 
-        // Email regex
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-        // Password regex: 8+ chars, upper, lower, digit, special
         const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
 
-        if(!emailPattern.test(email)) {
+        if (!emailPattern.test(email)) {
             errorMessage.textContent = 'Incorrect email format.';
             return false;
         }
 
-        if(!passwordPattern.test(password)) {
+        if (!passwordPattern.test(password)) {
             errorMessage.textContent = 'Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.';
             return false;
         }
 
-        errorMessage.textContent = ''; // clear error
+        errorMessage.textContent = '';
 
-        // Save user to localStorage
+        // Get users and check duplicates
         let users = JSON.parse(localStorage.getItem('users')) || [];
+        const existingUser = users.find(user => user.email === email);
+        if (existingUser) {
+            errorMessage.textContent = 'Email already registered.';
+            return false;
+        }
+
+        // Save user
         users.push({ username, email, password });
         localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem(username + "_cart", JSON.stringify([])); // optional cart
 
         alert('Registration successful!');
-        form.reset();
-        window.location.href = "registered.html";
+        window.location.href = "registered.html"; // redirect AFTER alert
     });
 });
 
@@ -77,19 +81,6 @@ function searchSite() {
     }
 
     alert("No matching page found.");
-}
-
-function ValidateForm(){
-    var name=document.getElementById("name").value;
-    var email=document.getElementById("email").value;
-    var message=document.getElementById("message").value;
-    if(name=="" || email=="" || message==""){
-        alert("All fields are required!");
-        return false;
-    } else {
-        alert("Form submitted successfully!");
-        return true;
-    } 
 }
 
 window.addEventListener("DOMContentLoaded", () => {
