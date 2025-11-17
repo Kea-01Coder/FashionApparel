@@ -18,19 +18,21 @@
             <select onchange="location = this.value;">
              <option value="">Services</option>
              <option value="design.html">Design</option>
-             <option value="orders.html">Orders</option>
+             <option id="ordersOption" value="pages/orders.html" disabled>Orders</option>
             </select>
             <a href="EcoEdu.html">Eco-Education</a>
             <a href="contact.html">CONTACT US</a>
-        </nav>
-
-    <div class="container nav">
-      <div class="brand">
-        <div style="text-align: center;">
-          <div>FASHIONAPPAREL</div>
-          <div class="muted">Modern clothing & essentials</div>
-        </div>
-      </div>
+            <input type="text" id="siteSearch" placeholder="Search..." onkeyup="searchSite()">
+          </nav>
+            <div class="container nav">
+            <div class="brand">
+              <div style="text-align: center;">
+                <div>FASHIONAPPAREL</div>
+                <div class="muted">Modern clothing & essentials</div>
+              </div>
+            </div>
+          </header>
+    
       <br>
       <nav class="site-nav">
         <ul>
@@ -59,7 +61,6 @@
         </ul>
       </nav>
     </div>
-    </header>
 
     <h2 id="WelcomeMessage"></h2>
 
@@ -925,7 +926,21 @@
     </footer>
 
     
-  <script src="User.js"></script>
+  <script src="../User.js"></script>
+  
+  <p id="liveTime"></p>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("liveTime").textContent = 
+        "Current Time: " + now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+
+
   <script>
     // Inline script just to update the name
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -957,7 +972,7 @@
     window.location.href = "orders.html";
   }
 </script>
-
   
+
 </body>
 </html>

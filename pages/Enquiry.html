@@ -17,10 +17,11 @@
             <select onchange="location = this.value;">
              <option value="">Services</option>
              <option value="design.html">Design</option>
-             <option value="orders.html">Orders</option>
+             <option id="ordersOption" value="pages/orders.html" disabled>Orders</option>
             </select>
             <a href="EcoEdu.html">Eco-Education</a>
              <a href="contact.html">CONTACT US</a>
+             <input type="text" id="siteSearch" placeholder="Search..." onkeyup="searchSite()">
         </nav>
 
         <div class="brand">
@@ -57,5 +58,7 @@
           </div>
          </div>
         </footer>
+
+        <script src="../Users.js"></script>
 </body>
 </html>
