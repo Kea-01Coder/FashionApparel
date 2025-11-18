@@ -1,6 +1,16 @@
 # FashionApparel
 Clothing Store
 
+DIRECT INSTRUCTIONS
+*Some Buttons work with links so you have to tap on the word(s) written on the button
+
+*The top search bar is only built for searching pages
+
+*You cannot see the cart unless you register and Log in
+
+*Register by pressing the JOIN US button, it will take you to the register page, if your  registration is successful, yu will be directed to the registered page and from  there you can see other pages. The website consists of 8 pages that can be accessed. If you have something to say send a message by accessing the contact page or the enquiry page.
+To see or order access our design page under services, there you will see all the clothing available. 
+
 v1.1.0 (27 August 2025)
 Index.html serving as a home page
 
@@ -20,7 +30,7 @@ Instructions
 In order to see the registrations page you have to click the Join us button
 If the are any problems with the buttons, click directly on the word(s)
 
-V1.1.0 Update (26 September 2025)
+V2.0.0 Update (26 September 2025)
 ChangeLog
 Added a new page called OrderSucces, which will tell the user that their order was successful
 
@@ -44,6 +54,41 @@ SEE WEBSITE RESPONSIVE DESIGN SNIPPETS:
 ../assets/DeviceResponsiveness/MobileLResponsiveness
 ../assets/DeviceResponsiveness/TabletResponsiveness
 ../assets/DeviceResponsiveness/LaptopResponsiveness
+
+V2.0.0 Update(19 November 2025)
+*Added a search bar to all the pages on the navigation bar
+
+*Home Page
+    Added a banner image to my home page
+    Added Modal to home page, changed the option of order to only show when user is logged in, also added a function of the modal
+
+*About Page
+    Added a accordion to my about page
+    Added a livetime function to show the current time
+
+
+*Design Page
+    Added a label for the sizes and added a quantity option to the clothes. 
+    Added a function on the order page to show the orders added to the cart.
+    Added a product size select function on the design page and added a different button.
+
+*Added an enquiry page
+    Added a google form on the enquiry form
+
+*Added a JavaScript page
+    Implemented the functions into the Index page and register page
+    Added a JavaScript function to display the name when logged in on top of the page
+    Added a function on the design page that adds the details of the to the order page
+    Added a function for searching pages
+    Added a function to allow the cart to be different for every user when logged in
+
+*Made some minor adjustments on the register page and index page
+
+*Update in CSS
+    Added a bit of responsiveness on the google form
+    Added style for accordion and modal
+
+Feedback about lack of information in the READMe: Added information on my README file
 
 References
 Patagonia, 2025. Shop Sustainable clothing. [Online] 
