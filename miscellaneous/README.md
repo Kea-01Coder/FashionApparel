@@ -66,11 +66,15 @@ V2.0.0 Update(19 November 2025)
     Added a accordion to my about page
     Added a livetime function to show the current time
 
-
 *Design Page
     Added a label for the sizes and added a quantity option to the clothes. 
     Added a function on the order page to show the orders added to the cart.
     Added a product size select function on the design page and added a different button.
+
+*Order page
+   Added a removefromcart function
+   Added a loadfromcart function
+   Added soem validation functions to ensure that the order cannot be processed without filling in the form
 
 *Added an enquiry page
     Added a google form on the enquiry form
@@ -87,6 +91,7 @@ V2.0.0 Update(19 November 2025)
 *Update in CSS
     Added a bit of responsiveness on the google form
     Added style for accordion and modal
+    Added style for the modal button
 
 Feedback about lack of information in the READMe: Added information on my README file
 
@@ -110,3 +115,25 @@ Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 W3 Schools, 2025. CSS Styling Images. [Online]
 Available at: https://www.w3schools.com/css/css3_images.asp
 [Accessed 20 September 2025]
+
+W3 Schools, 2025. CSS Styling Images. [Online]
+Available at: https://www.w3schools.com/css/css3_images.asp
+[Accessed 20 September 2025]
+
+Mozilla Developer Network (MDN Web Docs), 2025. Document Object Model (DOM) — getElementById. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. EventTarget.addEventListener. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener [Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. Window/localStorage. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. JSON — parse and stringify. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. Regular Expressions (RegExp). [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions 
+[Accessed: 19 November 2025].

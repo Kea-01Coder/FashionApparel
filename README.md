@@ -1,6 +1,18 @@
 # FashionApparel
 Clothing Store
 
+DIRECT INSTRUCTIONS
+*Some Buttons work with links so you have to tap on the word(s) written on the button
+
+*The top search bar is only built for searching pages, due to lack of knowledge, you can search any page besides the home page from the home page
+
+*You cannot see the cart unless you register and Log in
+
+*Register by pressing the JOIN US button that is in the special offer button, it will take you to the register page, if your  registration is successful, you will be directed to the registered page and from there you can see other pages. The website consists of 8 pages that can be accessed. If you have something to say send a message by accessing the contact page or the enquiry page.
+To see or order access our design page under services, there you will see all the clothing available. 
+
+*You cannot submit forms without filling the entire form, the phone number part needs either to first insert a 0 or a +27
+
 v1.1.0 (27 August 2025)
 Index.html serving as a home page
 
@@ -16,9 +28,7 @@ Added pages for registration
 
 Added a contact page
 
-Instructions
-In order to see the registrations page you have to click the Join us button
-If the are any problems with the buttons, click directly on the word(s)
+
 
 ChangeLog
 V1.1.0 Initial(27 August 2025)
@@ -67,6 +77,10 @@ V3.0.0 Update (19 November 2025)
     Added a accordion to my about page
     Added a livetime function to show the current time
 
+*Order page
+   Added a removefromcart function
+   Added a loadfromcart function
+   Added soem validation functions to ensure that the order cannot be processed without filling in the form
 
 *Design Page
     Added a label for the sizes and added a quantity option to the clothes. 
@@ -88,6 +102,7 @@ V3.0.0 Update (19 November 2025)
 *Update in CSS
     Added a bit of responsiveness on the google form
     Added style for accordion and modal
+    Added style for the modal button
 
 Feedback about lack of information in the READMe: Added information on my README file
 
@@ -111,3 +126,21 @@ Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 W3 Schools, 2025. CSS Styling Images. [Online]
 Available at: https://www.w3schools.com/css/css3_images.asp
 [Accessed 20 September 2025]
+
+Mozilla Developer Network (MDN Web Docs), 2025. Document Object Model (DOM) — getElementById. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. EventTarget.addEventListener. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener [Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. Window/localStorage. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. JSON — parse and stringify. [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON 
+[Accessed: 19 November 2025].
+
+Mozilla Developer Network (MDN Web Docs), 2025. Regular Expressions (RegExp). [Online]. 
+Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions 
+[Accessed: 19 November 2025].
