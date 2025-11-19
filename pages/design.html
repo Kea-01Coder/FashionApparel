@@ -9,97 +9,101 @@
 </head>
 
 <body>
-    <header>
-      <img src="../assets/LOGO.png" alt="Logo" width="100" height="100">
-        <nav>
-            <a href="../index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-          
-            <select onchange="location = this.value;">
-             <option value="">Services</option>
-             <option value="design.html">Design</option>
-             <option id="ordersOption" value="orders.html" disabled>Orders</option>
-            </select>
-            <a href="EcoEdu.html">Eco-Education</a>
-            <a href="contact.html">CONTACT US</a>
-           
-            <input type="text" id="searchInput">
-            <button onclick="searchSite()">Search</button>
-          </nav>
-            <div class="container nav">
-            <div class="brand">
-              <div style="text-align: center;">
-                <div>FASHIONAPPAREL</div>
-                <div class="muted">Modern clothing & essentials</div>
-              </div>
-            </div>
-          </header>
-    
-      <br>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#new">New</a></li>
-          <li><a href="#best">Best Sellers</a></li>
-          
-          <li><!--Links for all the clothing in the men section-->
-           <select name="Men" onchange="location = this.value;">
-           <option value="">MEN</option>
-           <option value="#Men Pants">Pants</option>
-           <option value="#Men Shirts">Shirts</option>
-           </select>
-           </li>
 
-           <li><!--Links for all the clothing in the women section-->
-           <select name="Women" onchange="location = this.value;">
-            <option value="">WOMEN</option>
-            <option value="#Women Dresses">Dresses</option>
-            <option value="#Women Pants">Pants</option>
-            <option value="#Women Shirts">Shirts</option>
-            <option value="Women Skirts">Skirts</option>
-            <option value="#Women Jerseys">Jerseys</option>
-           </select>
-          </li>
-          <li><a href="#Jackets">Jackets</a></li>
-        </ul>
-      </nav>
+<header>
+  <img src="../assets/LOGO.png" alt="Logo" width="100" height="100">
+  <nav>
+    <a href="../index.html">HOME</a>
+    <a href="about.html">ABOUT US</a>
+          
+    <select onchange="location = this.value;">
+     <option value="">Services</option>
+     <option value="design.html">Design</option>
+     <option id="ordersOption" value="orders.html" disabled>Orders</option>
+    </select>
+      
+    <a href="EcoEdu.html">Eco-Education</a>
+    <a href="contact.html">CONTACT US</a>
+           
+    <input type="text" id="searchInput">
+    <button onclick="searchSite()">Search</button>
+  </nav>
+
+  <div class="brand">
+    <div style="text-align: center;">
+      <div>FASHIONAPPAREL</div>
+      <div class="muted">Modern clothing & essentials</div>
+    </div>
+  </div>
+</header>
+    
+<br>
+<div class="container nav">
+ <nav class="site-nav">
+  <ul>
+    <li><a href="#new">New</a></li>
+    <li><a href="#best">Best Sellers</a></li>
+          
+    <li><!--Links for all the clothing in the men section-->
+      <select name="Men" onchange="location = this.value;">
+        <option value="">MEN</option>
+        <option value="#Men Pants">Pants</option>
+        <option value="#Men Shirts">Shirts</option>
+      </select>
+    </li>
+
+    <li><!--Links for all the clothing in the women section-->
+      <select name="Women" onchange="location = this.value;">
+        <option value="">WOMEN</option>
+        <option value="#Women Dresses">Dresses</option>
+        <option value="#Women Pants">Pants</option>
+        <option value="#Women Shirts">Shirts</option>
+        <option value="Women Skirts">Skirts</option>
+        <option value="#Women Jerseys">Jerseys</option>
+      </select>
+    </li>
+    <li><a href="#Jackets">Jackets</a></li>
+  </ul>
+ </nav>
+</div>
+
+<article class="card">
+  <span style="text-align: center;">
+    <h2 id="WelcomeMessage"></h2>
+  </span>
+</article>
+
+<br>
+<br>
+
+<main class="container">
+  <section class="hero section">
+    <div class="hero-inner">
+      <div class="eyebrow">NEW SEASON</div>
+      <h1>Clean, comfortable styles crafted for everyday life</h1>
+      <p class="lead">Discover our latest collection of wardrobe staples. Minimal design, high-quality fabrics, and inclusive sizing ready to wear, right now.</p>
+        
+      <div class="cta-row">
+        <button><a class="btn btn-primary" href="#new">Shop Collections</a></button>
+        <button><a class="btn btn-outline" href="#best">Explore Best Sellers</a></button>
+      </div>
     </div>
 
-    <article class="card">
-      <span style="text-align: center;">
-        <h2 id="WelcomeMessage"></h2>
-      </span>
-    </article>
-    <br>
-    <br>
-   <main class="container">
+    <div class="hero-image" aria-hidden="true">
+      <img src="../assets/team-young-people-casual-clothes-standing-wall-group-happy-men-women-friends-wearing-comfortable-shirts-jeans-332853880.webp" alt="Man and woman wearing casual clothes" width="500px"/>
+    </div>
+  </section>
 
-      <section class="hero section">
-      <div class="hero-inner">
-        <div class="eyebrow">NEW SEASON</div>
-        <h1>Clean, comfortable styles crafted for everyday life</h1>
-        <p class="lead">Discover our latest collection of wardrobe staples. Minimal design, high-quality fabrics, and inclusive sizing ready to wear, right now.</p>
-        
-        <div class="cta-row">
-          <button><a class="btn btn-primary" href="#new">Shop Collections</a></button>
-          <button><a class="btn btn-outline" href="#best">Explore Best Sellers</a></button>
-        </div>
-      </div>
+  <section id="best" class="section">
+    <div class="section-head">
+      <h2>Best Sellers</h2>
+      <div class="muted">Loved by customers</div>
+    </div>
 
-      <div class="hero-image" aria-hidden="true">
-        <img src="../assets/team-young-people-casual-clothes-standing-wall-group-happy-men-women-friends-wearing-comfortable-shirts-jeans-332853880.webp" alt="Man and woman wearing casual clothes" width="500px"/>
-      </div>
-    </section>
-
-    <section id="best" class="section">
-      <div class="section-head">
-        <h2>Best Sellers</h2>
-        <div class="muted">Loved by customers</div>
-      </div>
-
-      <!--the class groups everything in each seperate section-->
-      <div class="grid">
-        <article class="card">
-          <div class="product-media"><img src="../assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped shirt" width="300" height="300"/></div>
+    <!--the class groups everything in each seperate section-->
+    <div class="grid">
+      <article class="card">
+        <div class="product-media"><img src="../assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped shirt" width="300" height="300"/></div>
           <div class="product-body">
             <h3 class="product-title">Striped Shirt</h3>
             <div class="product-price">R329</div>
@@ -112,134 +116,136 @@
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
-        </article>
+      </article>
 
-        <article class="card">
-          <div class="product-media"><img src="../assets/Men's Clothing/Shirts/buddenhaggen-light-green-stripes-3668572.webp" alt="buddenhaggen-light-green-stripes-3668572" width="300" height="300"/></div>
-          <div class="product-body">
-            <h3 class="product-title">Striped long Shirt</h3>
-            <div class="product-price">R380</div>
-            <p class="product-desc">Smart-casual shirt for work or weekend.</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+      <article class="card">
+        <div class="product-media"><img src="../assets/Men's Clothing/Shirts/buddenhaggen-light-green-stripes-3668572.webp" alt="buddenhaggen-light-green-stripes-3668572" width="300" height="300"/></div>
+        <div class="product-body">
+          <h3 class="product-title">Striped long Shirt</h3>
+          <div class="product-price">R380</div>
+          <p class="product-desc">Smart-casual shirt for work or weekend.</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-            <label for="size">Size:</label>
-           <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>
+          </select>
+
           <button onclick="addToCart(this)">Add To Cart</button>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="product-media"><img src="../assets/taylor-dark-green-4451364.webp" alt="taylor-dark-green-4451364 width="300" height="300"/></div>
-          <div class="product-body">
-            <h3 class="product-title">Taylor Dark Green Warm Hemp</h3>
-            <div class="product-price">R450</div>
-            <p class="product-desc">Casual Hemp for work or weekend.</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+      <article class="card">
+        <div class="product-media"><img src="../assets/taylor-dark-green-4451364.webp" alt="taylor-dark-green-4451364" width=300 height="300"/></div>
+        <div class="product-body">
+          <h3 class="product-title">Taylor Dark Green Warm Hemp</h3>
+          <div class="product-price">R450</div>
+          <p class="product-desc">Casual Hemp for work or weekend.</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-            <label for="size">Size:</label>
-           <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option> 
+          </select>
+
           <button onclick="addToCart(this)">Add To Cart</button>
-          </div>
-        </article>
+        </div>
+      </article>
 
-      </div>
-    </section>
-<br>
-    <section id="new" class="section">
-      <div class="section-head">
-        <h2>New Arrivals</h2>
-        <div class="muted">Just landed this week</div>
-      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section id="new" class="section">
+    <div class="section-head">
+      <h2>New Arrivals</h2>
+      <div class="muted">Just landed this week</div>
+    </div>
   
-      <div class="grid">
-        <article class="card">
-          <div class="product-media"><img src="../assets/Men's Clothing/Shirts/kahuku-ivy-green-985066.jpg" alt="kahuku-ivy-green" height="300" width="300"/></div>
-          <div class="product-body">
-            <h3 class="product-title">Polo Shirt</h3>
-            <div class="product-price">R329</div>
-            <p class="product-desc">Smart-casual shirt for work or weekend.</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+    <div class="grid">
+      <article class="card">
+        <div class="product-media"><img src="../assets/Men's Clothing/Shirts/kahuku-ivy-green-985066.jpg" alt="kahuku-ivy-green" height="300" width="300"/></div>
+        <div class="product-body">
+          <h3 class="product-title">Polo Shirt</h3>
+          <div class="product-price">R329</div>
+          <p class="product-desc">Smart-casual shirt for work or weekend.</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-            <label for="size">Size:</label>
-             <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>      
+          </select>
+          
           <button onclick="addToCart(this)">Add To Cart</button>
-          </div>
-        </article>
+        </div>
+      </article>
    
-        <article class="card">
-          <div class="product-media"><img src="../assets/Jackets/razo-night-sky-512797.jpg" alt="Blue Warm Jacket" width="300" height="300"/></div>
-          <div class="product-body">
-            <h3 class="product-title">Razo-Night-Sky Jacket</h3>
-            <div class="product-price">R569</div>
-            <p class="product-desc">A good jacket for rainy or windy weather</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+      <article class="card">
+        <div class="product-media"><img src="../assets/Jackets/razo-night-sky-512797.jpg" alt="Blue Warm Jacket" width="300" height="300"/></div>
+        <div class="product-body">
+          <h3 class="product-title">Razo-Night-Sky Jacket</h3>
+          <div class="product-price">R569</div>
+          <p class="product-desc">A good jacket for rainy or windy weather</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-            <label for="size">Size:</label>
-             <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="product-media"><img src="../assets/Jackets/Henderson-Black_01.webp" alt="Henderson-Black_01" width="300" height="300"/></div>
-          <div class="product-body">
-            <h3 class="product-title">Henderson Black Jacket for women</h3>
-            <div class="product-price">R500</div>
-            <p class="product-desc">Smart-casual no sleeve jacket for work or weekend.</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-            <label for="size">Size:</label>
-           <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-          </div>
-        </article>
-
-      </div>
-    </section>
-    <br>
-
-     <section id="men" class="section">
-      <div class="section-head">
-        <h2>Men's Collections</h2>
-        <div class="muted">Hand-picked for the season</div>
-      </div>
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option> 
+          </select>
         
-      <section id="Men Shirts">
-        <h2>Men's Shirts</h2>
+          <button onclick="addToCart(this)">Add To Cart</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="product-media"><img src="../assets/Jackets/Henderson-Black_01.webp" alt="Henderson-Black_01" width="300" height="300"/></div>
+        <div class="product-body">
+          <h3 class="product-title">Henderson Black Jacket for women</h3>
+          <div class="product-price">R500</div>
+          <p class="product-desc">Smart-casual no sleeve jacket for work or weekend.</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>  
+          </select>
+          
+          <button onclick="addToCart(this)">Add To Cart</button>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <br>
+
+  <section id="men" class="section">
+    <div class="section-head">
+      <h2>Men's Collections</h2>
+      <div class="muted">Hand-picked for the season</div>
+    </div>
+        
+    <section id="Men Shirts">
+      <h2>Men's Shirts</h2>
       <div class="grid">
         <article class="card">          
           <div class="product-media"><img src="../assets/Men's Clothing/Shirts/pupukea-vintage-ecru-411600.jpg" alt="Relaxed tee" width="300" height="300"/></div>
@@ -254,10 +260,10 @@
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
+              <option value="XL">Extra Large</option>      
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
         </article>
         
@@ -270,14 +276,14 @@
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
+              <option value="XL">Extra Large</option>  
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
         </article>
        
@@ -290,14 +296,14 @@
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
         </article>
 
@@ -310,258 +316,261 @@
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
+              <option value="XL">Extra Large</option> 
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
         </article>
-        </div>
-        </div>
-      </section>
-        <br>
-      <section id="Men Pants">
-        <h2>Men's Pants</h2>
-        <div class="grid">
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Men's Clothing/Pants/bagaat-dark-lake-454757.jpg" alt="Dark Lake Pants" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Dark Lake Shorts</h4>
-             <div class="product-price">R420</div>
-             <p class="product-desc">Linen Fabric</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-              <label for="size">Size:</label>
-              <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-        
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Men's Clothing/Pants/kawailoa-mocha-brown-8107056.jpg" alt="Mocha Brown Pants" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Mocha Brown Shorts</h4>
-             <div class="product-price">R499</div>
-             <p class="product-desc">Linen Fabric</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-              <label for="size">Size:</label>
-              <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-        
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Men's Clothing/Pants/Brown Pants.jpg" alt="Brown Pants" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Brown Formal Pants</h4>
-             <div class="product-price">R620</div>
-             <p class="product-desc"> Fine Formal Pants</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-              <label for="size">Size:</label>
-              <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-         
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Men's Clothing/Pants/kotomo-ivy-green-481782.jpg" alt="Ivy Green Pants" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Ivy Green Pants</h4>
-             <div class="product-price">R600</div>
-             <p class="product-desc">Pants great for outside activities</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-              <label for="size">Size:</label>
-              <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-         
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Men's Clothing/Pants/kotomo-natural-140929.jpg" alt="The Original Kotoma Pants" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Kotomo Natural Pants</h4>
-             <div class="product-price">R600</div>
-             <p class="product-desc">Pants great for outside activities</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-              <label for="size">Size:</label>
-             <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-         </div>
-         </div>
-      </section>
     </section>
-<br>
-      <section id="women" class="section">
-        <div class="section-head">
-          <h2>Women's Collections</h2>
-         <div class="muted">Hand-picked for the season</div>
-        </div>
+    
+    <br>
 
-        <section id="Women Shirts">
-          <h2>Women's Shirts</h2>
-         <div class="grid">
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped tee" width="300" height="300"/></div>
-            <div class="product-body">
-             <h4 class="product-title">Mixed Striped Shirt</h4>
-             <div class="product-price">R300</div>
-             <p class="product-desc">Soft cotton striped tee</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+    <section id="Men Pants">
+      <h2>Men's Pants</h2>
+      <div class="grid">
+        <article class="card">          
+         <div class="product-media"><img src="../assets/Men's Clothing/Pants/bagaat-dark-lake-454757.jpg" alt="Dark Lake Pants" width="300" height="300"></div>
+         <div class="product-body">
+            <h4 class="product-title">Dark Lake Shorts</h4>
+            <div class="product-price">R420</div>
+            <p class="product-desc">Linen Fabric</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-              <label for="size">Size:</label>
-              <select class="product-size">
+            <label for="size">Size:</label>
+            <select class="product-size">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>          
+            </select>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
+        
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Men's Clothing/Pants/kawailoa-mocha-brown-8107056.jpg" alt="Mocha Brown Pants" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Mocha Brown Shorts</h4>
+            <div class="product-price">R499</div>
+            <p class="product-desc">Linen Fabric</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+            <label for="size">Size:</label>
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
+       
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
         
-          <article class="card">
-           <div class="product-media"><img src="../assets/Women's Clothing/Shirts/molln-off-white-2917641.webp" alt="Molln Off White tee" width="300" height="300"/></div>
-           <div class="product-body">
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Men's Clothing/Pants/Brown Pants.jpg" alt="Brown Pants" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Brown Formal Pants</h4>
+            <div class="product-price">R620</div>
+            <p class="product-desc"> Fine Formal Pants</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+            <label for="size">Size:</label>
+            <select class="product-size">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>    
+            </select>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
+         
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Men's Clothing/Pants/kotomo-ivy-green-481782.jpg" alt="Ivy Green Pants" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Ivy Green Pants</h4>
+            <div class="product-price">R600</div>
+            <p class="product-desc">Pants great for outside activities</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+            <label for="size">Size:</label>
+            <select class="product-size">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>    
+            </select>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
+       
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Men's Clothing/Pants/kotomo-natural-140929.jpg" alt="The Original Kotoma Pants" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Kotomo Natural Pants</h4>
+            <div class="product-price">R600</div>
+            <p class="product-desc">Pants great for outside activities</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+            <label for="size">Size:</label>
+            <select class="product-size">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>
+            </select>
+         
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>   
+      </div>
+    </section>
+  </section>
+
+  <br>
+
+  <section id="women" class="section">
+    <div class="section-head">
+      <h2>Women's Collections</h2>
+      <div class="muted">Hand-picked for the season</div>
+    </div>
+
+    <section id="Women Shirts">
+      <h2>Women's Shirts</h2>
+      <div class="grid">
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Women's Clothing/Shirts/kulitz-mixed-stripes.webp" alt="Striped tee" width="300" height="300"/></div>
+          <div class="product-body">
+            <h4 class="product-title">Mixed Striped Shirt</h4>
+            <div class="product-price">R300</div>
+            <p class="product-desc">Soft cotton striped tee</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+            <label for="size">Size:</label>
+            <select class="product-size">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>  
+            </select>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
+        
+        <article class="card">
+          <div class="product-media"><img src="../assets/Women's Clothing/Shirts/molln-off-white-2917641.webp" alt="Molln Off White tee" width="300" height="300"/></div>
+          <div class="product-body">
             <h3 class="product-title">Molln White Tee</h3>
             <div class="product-price">R249</div>
             <p class="product-desc">Soft cotton graphic tee</p>
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
+            </select>
             
-             </select>
             <button onclick="addToCart(this)">Add To Cart</button>
-           </div>
-          </article>   
+          </div>
+        </article>   
         
-          <article class="card">
-           <div class="product-media"><img src="../assets/Women's Clothing/Shirts/niu-black-2773336.webp" alt="Black Shirt" width="300" height="300"/></div>
-           <div class="product-body">
+        <article class="card">
+          <div class="product-media"><img src="../assets/Women's Clothing/Shirts/niu-black-2773336.webp" alt="Black Shirt" width="300" height="300"/></div>
+          <div class="product-body">
             <h3 class="product-title">Black Shirt For Women</h3>
             <div class="product-price">R360</div>
             <p class="product-desc">Soft Cotton Black tee as a fashion piece</p>
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-           </div>
-          </article>   
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>   
         
-          <article class="card">
-           <div class="product-media"><img src="../assets/Women's Clothing/Shirts/niu-ecru-1200422.webp" alt="Ecru/White tee" width="300" height="320"/></div>
-           <div class="product-body">
+        <article class="card">
+          <div class="product-media"><img src="../assets/Women's Clothing/Shirts/niu-ecru-1200422.webp" alt="Ecru/White tee" width="300" height="320"/></div>
+          <div class="product-body">
             <h3 class="product-title">White Shirt For Women</h3>
             <div class="product-price">R360</div>
             <p class="product-desc">Soft Cotton White tee as a fashion piece</p> 
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-             <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+          
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
-          </article>   
-         </div>
-      </section>
+        </article>   
+      </div>
+    </section>
+  
     <br>  
-      <section id="Women Dresses">
-        <h2>Women's Dresses</h2>
+  
+    <section id="Women Dresses">
+      <h2>Women's Dresses</h2>
          <div class="grid">
           <article class="card">          
            <div class="product-media"><img src="../assets/Women's Clothing/Dresses/pollan-black-white-vichy-176015.webp" alt="pollan-black-white-vichy" width="300" height="300"/></div>
             <div class="product-body">
-             <h4 class="product-title">Pollan Black White Vichy Dress</h4>
-             <div class="product-price">R630</div>
-             <p class="product-desc">Black and White dress perfect for a sunny day</p>
+              <h4 class="product-title">Pollan Black White Vichy Dress</h4>
+              <div class="product-price">R630</div>
+              <p class="product-desc">Black and White dress perfect for a sunny day</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
            <div class="product-media"><img src="../assets/Women's Clothing/Dresses/varpasalo-apple-red-599918.webp" alt="varpasalo-apple-red" width="300" height="300"/></div>
             <div class="product-body">
-             <h4 class="product-title">Varpasalo Apple Red Dress</h4>
-             <div class="product-price">R540</div>
-             <p class="product-desc">Apple Red dress perfect for sunny weather</p>
+              <h4 class="product-title">Varpasalo Apple Red Dress</h4>
+              <div class="product-price">R540</div>
+              <p class="product-desc">Apple Red dress perfect for sunny weather</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
 
@@ -574,220 +583,226 @@
             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
             <label for="size">Size:</label>
-               <select class="product-size">
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
+              <option value="XL">Extra Large</option>     
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+        
+            <button onclick="addToCart(this)">Add To Cart</button>
           </div>
         </article>
-
-         </div>
-      </section>
-      <br>
-      <section id="Women Pants">
-        <h2>Women's Pants</h2>
-        <div class="grid">
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Pants/kiritibati-sky-blue-979667.webp" alt="kiritibati-sky-blue" width="300" height="300"/></div>
-            <div class="product-body">
-             <h4 class="product-title">Kiritibati Sky Blue Jeans</h4>
-             <div class="product-price">R620</div>
-             <p class="product-desc">Denim Sky Blue Jean perfect for any wear</p>
+      </div>
+    </section>
+    
+    <br>
+    
+    <section id="Women Pants">
+      <h2>Women's Pants</h2>
+      <div class="grid">
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Women's Clothing/Pants/kiritibati-sky-blue-979667.webp" alt="kiritibati-sky-blue" width="300" height="300"/></div>
+          <div class="product-body">
+              <h4 class="product-title">Kiritibati Sky Blue Jeans</h4>
+              <div class="product-price">R620</div>
+              <p class="product-desc">Denim Sky Blue Jean perfect for any wear</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Pants/balcarrick-dark-green-1898938.webp" alt="balcarrick-dark-green-1898938"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Pants/balcarrick-dark-green-1898938.webp" alt="balcarrick-dark-green-1898938"></div>
             <div class="product-body">
-             <h4 class="product-title">Balcarrick Dark Green wide pants</h4>
-             <div class="product-price">R600</div>
+              <h4 class="product-title">Balcarrick Dark Green wide pants</h4>
+              <div class="product-price">R600</div>
               <p class="product-desc">Balcarrick Dark Green wide pants perfect for any wear</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
-               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+              <select class="product-size">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Pants/luhme-dusty-ochre-8018012.webp" alt="luhme-dusty-ochre" width="300" height="350"/></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Pants/luhme-dusty-ochre-8018012.webp" alt="luhme-dusty-ochre" width="300" height="350"/></div>
             <div class="product-body">
-             <h4 class="product-title">Luhme Dusty Ochre</h4>
-             <div class="product-price">R620</div>
-             <p class="product-desc">Luhme Dusty Corduroy Pants with a relaxed fit.</p>
+              <h4 class="product-title">Luhme Dusty Ochre</h4>
+              <div class="product-price">R620</div>
+              <p class="product-desc">Luhme Dusty Corduroy Pants with a relaxed fit.</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
-               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+              <select class="product-size">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
-         </div>         
+        </div>         
       </section>
-<br>
+
+      <br>
+  
       <section id="Women Skirts">
         <h2>Women's Skirts</h2>
         <div class="grid">
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Skirts/aspo-light-khaki-560772.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Skirts/aspo-light-khaki-560772.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">Aspo Light Khaki</h4>
-             <div class="product-price">R520</div>
-             <p class="product-desc">Aspo Light Khaki skirt good for outings</p>
+              <h4 class="product-title">Aspo Light Khaki</h4>
+              <div class="product-price">R520</div>
+              <p class="product-desc">Aspo Light Khaki skirt good for outings</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Skirts/aspo-light-khaki-987244.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Skirts/aspo-light-khaki-987244.jpg" alt="aspo-light-khaki" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">Light Khaki Skirt</h4>
-             <div class="product-price">R520</div>
-             <p class="product-desc">Light Khaki Skirt with a relaxed fit</p>
+              <h4 class="product-title">Light Khaki Skirt</h4>
+              <div class="product-price">R520</div>
+              <p class="product-desc">Light Khaki Skirt with a relaxed fit</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+              </select>
+    
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Skirts/castlerock-toffee-888576.jpg" alt="castlerock-toffee" width="300" height="300"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Skirts/castlerock-toffee-888576.jpg" alt="castlerock-toffee" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">Castlerock Toffee Skirt</h4>
-             <div class="product-price">R520</div>
-             <p class="product-desc">A skirt perfect for staying at home and going out</p>
+              <h4 class="product-title">Castlerock Toffee Skirt</h4>
+              <div class="product-price">R520</div>
+              <p class="product-desc">A skirt perfect for staying at home and going out</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
             
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Skirts/jusaari-ultramarine-379885.jpg" alt="" width="300" height="300"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Skirts/jusaari-ultramarine-379885.jpg" alt="" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">Ultramarine Skirt</h4>
-             <div class="product-price">R420</div>
-             <p class="product-desc">A Skirt made as a fashion piece</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+              <h4 class="product-title">Ultramarine Skirt</h4>
+              <div class="product-price">R420</div>
+              <p class="product-desc">A Skirt made as a fashion piece</p>
+              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
              
-             <label for="size">Size:</label>
-             <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+              <label for="size">Size:</label>
+              <select class="product-size">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option> 
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
       
           <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Skirts/kuratake-light-blue-884071.jpg" alt="" width="300" height="300"></div>
+            <div class="product-media"><img src="../assets/Women's Clothing/Skirts/kuratake-light-blue-884071.jpg" alt="" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">Jean Skirt</h4>
-             <div class="product-price">R520</div>
-             <p class="product-desc">Denim Fabric</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
-
-             <label for="size">Size:</label>
-              <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
-         </div>
-        </section>
-   <br>
-        <section id="Women Jerseys">
-        <h2>Women's Jersey</h2>
-          <div class="grid">
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Women's Clothing/Jerseys/salthill-cappuccino-455895.jpg" alt="salthill-cappuccino-455895" width="" height=""></div>
-            <div class="product-body">
-             <h4 class="product-title">SaltHill Cappuccino Jersey</h4>
-             <div class="product-price">R560</div>
-             <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
+              <h4 class="product-title">Jean Skirt</h4>
+              <div class="product-price">R520</div>
+              <p class="product-desc">Denim Fabric</p>
               <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
               <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option> 
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
           </article>
+        </div>
+      </section>
+   
+      <br>
 
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/Misali-Cappuccino_01.webp" alt="Misali-Cappuccino_01" width="300" height="300"></div>
+    <section id="Women Jerseys">
+      <h2>Women's Jersey</h2>
+      <div class="grid">
+        <article class="card">          
+            <div class="product-media"><img src="../assets/Women's Clothing/Jerseys/salthill-cappuccino-455895.jpg" alt="salthill-cappuccino-455895" width="" height=""></div>
             <div class="product-body">
-             <h4 class="product-title">Misali Cappuccino Jacket</h4>
-             <div class="product-price">R720</div>
-             <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+              <h4 class="product-title">SaltHill Cappuccino Jersey</h4>
+              <div class="product-price">R560</div>
+              <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
+              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+
+              <label for="size">Size:</label>
+              <select class="product-size">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option> 
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
+            </div>
+        </article>
+
+        <article class="card">          
+            <div class="product-media"><img src="../assets/Jackets/Misali-Cappuccino_01.webp" alt="Misali-Cappuccino_01" width="300" height="300"></div>
+            <div class="product-body">
+              <h4 class="product-title">Misali Cappuccino Jacket</h4>
+              <div class="product-price">R720</div>
+              <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
+              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
              <label for="size">Size:</label>
              <select class="product-size">
@@ -795,143 +810,141 @@
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+             </select>
+          
+             <button onclick="addToCart(this)">Add To Cart</button>
             </div>
-          </article>
+        </article>
 
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/galway-light-stone-658652.webp" alt="galway-light-stone-658652" width="300" height="300"></div>
+        <article class="card">          
+            <div class="product-media"><img src="../assets/Jackets/galway-light-stone-658652.webp" alt="galway-light-stone-658652" width="300" height="300"></div>
             <div class="product-body">
-             <h4 class="product-title">SaltHill Cappuccino Jersey</h4>
-             <div class="product-price">R560</div>
-             <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+              <h4 class="product-title">SaltHill Cappuccino Jersey</h4>
+              <div class="product-price">R560</div>
+              <p class="product-desc">Cotton Fabric jersey meant for warmth and fashion</p>
+              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-             <label for="size">Size:</label>
+              <label for="size">Size:</label>
               <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-            </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option> 
+              </select>
+          
+              <button onclick="addToCart(this)">Add To Cart</button>
             </div>
-          </article>
-
-         </div>
-      </section>
-      </section>
-   <br>
-      <section id="Jackets" class="section">
+        </article>
+      </div>
+    </section>
+  </section>
+   
+    <br>
+      
+  <section id="Jackets" class="section">
       <div class="section-head">
         <h2>Jackets</h2>
         <div class="muted">Perfect for layering</div>
       </div>
+      
       <div class="grid">
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/bushmill-burnt-orange-8765726.jpg" alt="" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Burnt Orange Jacket</h4>
-             <div class="product-price">R1200</div>
-             <p class="product-desc">Jacket meant for fashion and warmth</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Jackets/bushmill-burnt-orange-8765726.jpg" alt="" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Burnt Orange Jacket</h4>
+            <div class="product-price">R1200</div>
+            <p class="product-desc">Jacket meant for fashion and warmth</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-              <label for="size">Size:</label>
-               <select class="product-size">
+            <label for="size">Size:</label>
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
+              <option value="XL">Extra Large</option>  
             </select>
-          <button onclick="addToCart(this)">Add To Cart</button>
-            </div>
-          </article>
+       
+            <button onclick="addToCart(this)">Add To Cart</button>
+          </div>
+        </article>
    
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/bushmill-dark-grey-6001754.jpg" alt="" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Dark Grey Jacket</h4>
-             <div class="product-price">R1200</div>
-             <p class="product-desc">Jacket meant for fashion and warmth</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Jackets/bushmill-dark-grey-6001754.jpg" alt="" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">Dark Grey Jacket</h4>
+            <div class="product-price">R1200</div>
+            <p class="product-desc">Jacket meant for fashion and warmth</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-             <label for="size">Size:</label>
-             <select class="product-size">
+            <label for="size">Size:</label>
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
             </select>
           
             <button onclick="addToCart(this)">Add To Cart</button>
-           </div>
-          </article>
+          </div>
+        </article>
    
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/glenoe-light-khaki-210260.jpg" alt="" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">A Light Khaki Jacket</h4>
-             <div class="product-price">R1020</div>
-             <p class="product-desc">Jacket that serves as a jersey and a raincoat</p>
-              <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+        <article class="card">          
+          <div class="product-media"><img src="../assets/Jackets/glenoe-light-khaki-210260.jpg" alt="" width="300" height="300"></div>
+          <div class="product-body">
+            <h4 class="product-title">A Light Khaki Jacket</h4>
+            <div class="product-price">R1020</div>
+            <p class="product-desc">Jacket that serves as a jersey and a raincoat</p>
+            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
 
-              <label for="size">Size:</label>
-             <select class="product-size">
+            <label for="size">Size:</label>
+            <select class="product-size">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra Large</option>
-            
              </select>
-             <button onclick="addToCart(this)">Add To Cart</button>
-            
-           </div>
-          </article>
-   
-          <article class="card">          
-           <div class="product-media"><img src="../assets/Jackets/hoben-mustard-check-7388130.jpg" alt="" width="300" height="300"></div>
-            <div class="product-body">
-             <h4 class="product-title">Brown Checkered Jacket</h4>
-             <div class="product-price">R999</div>
-             <p class="product-desc">A nice color quoted jacket good for cold weather</p>
-             <div class="product-quantity"><label>Quantity<input type="text"></label></div> 
-
-             <label for="size">Size:</label>
-             <select class="product-size">
-              <option value="S">Small</option>
-              <option value="M">Medium</option>
-              <option value="L">Large</option>
-              <option value="XL">Extra Large</option>
-            
-             </select>
-             
-             <button onclick="addToCart(this)">Add To Cart</button>
-            
-            </div>
-          </article>
-         </div>
-    </section>
-  </main>
-
-  <footer>
-        <div class="container footer-grid">
-            <div>
-                <div style="font-weight:800">FashionApparel</div>
-                <div class="muted">Simple clothing, thoughtful design.</div>
-            </div>
-
-            <div style="text-align:center">
-                <div class="muted">&copy; FashionApparel 2025</div>
-                <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
-            </div>
+        
+             <button onclick="addToCart(this)">Add To Cart</button>    
         </div>
-    </footer>
+      </article>
+   
+      <article class="card">          
+        <div class="product-media"><img src="../assets/Jackets/hoben-mustard-check-7388130.jpg" alt="" width="300" height="300"></div>
+        <div class="product-body">
+          <h4 class="product-title">Brown Checkered Jacket</h4>
+          <div class="product-price">R999</div>
+          <p class="product-desc">A nice color quoted jacket good for cold weather</p>
+          <div class="product-quantity"><label>Quantity<input type="text"></label></div> 
 
+          <label for="size">Size:</label>
+          <select class="product-size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>
+          </select>
+             
+          <button onclick="addToCart(this)">Add To Cart</button>
+            
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+      <div>
+      <div style="font-weight:800">FashionApparel</div>
+      <div class="muted">Simple clothing, thoughtful design.</div>
+    </div>
+
+    <div style="text-align:center">
+      <div class="muted">&copy; FashionApparel 2025</div>
+      <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
+    </div>
+  </div>
+</footer>
     
   <script src="../User.js"></script>
   
@@ -980,6 +993,5 @@
   }
 </script>
   
-
 </body>
 </html>

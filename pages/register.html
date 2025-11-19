@@ -10,9 +10,9 @@
 
 <header>
   <img src="../assets/LOGO.png" alt="Logo" width="100" height="100">
-        <nav style="display:flex; gap: 20px; align-items: center;">
-        <a href="../index.html">HOME</a>
-        <a href="register.html">Register</a>
+  <nav>
+    <a href="../index.html">HOME</a>
+    <a href="register.html">Register</a>
     </nav>
     <div class="brand">
         <div style="text-align: center;">
@@ -22,8 +22,13 @@
       </div>
 </header>
 <body>
-    <form id="registerform">
+    <form id="registerForm">
         <h2>Register</h2>
+
+        <!-- Add this so your JS can write error text safely -->
+        <div id="error-message" role="alert" hidden style="color:#c00;margin-bottom:8px;"></div>
+
+
         <table>
             <tr>
                 <td>

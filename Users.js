@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registerForm');
     const errorMessage = document.getElementById('error-message');
 
-    form.addEventListener('submit', function(e) {
+    if(form){
+        form.addEventListener('submit', function(e) {
         e.preventDefault(); // prevent default form submission
 
         const username = document.getElementById('username').value.trim();
@@ -40,27 +41,68 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Registration successful!');
         window.location.href = "registered.html"; // redirect AFTER alert
     });
+} else{
+    console.warn("Register form not found on this page.");
+}
+    // When a user logs in — move this here so element exists
+    const usernameField = document.getElementById("username");
+    if (usernameField) {
+        let currentUser = usernameField.value || '';
+        if (currentUser) {
+            localStorage.setItem("loggedInUser", currentUser);
+        }
+    }
+
+    // Enable/disable orders option safely
+    const ordersOption = document.getElementById("ordersOption");
+    const user = localStorage.getItem("loggedInUser");
+    if (ordersOption) {
+        ordersOption.disabled = !user;
+    }
+
 });
 
+function login(event) 
+{
+    // prevent the form from submitting and causing navigation
+    if (event && event.preventDefault) event.preventDefault();
 
-function login() {
-  const username = document.getElementById("Loginusername").value;
-  const password = document.getElementById("Loginpassword").value;
-  const email = document.getElementById("Loginemail").value;
+  const usernameEl = document.getElementById("Loginusername");
+  const passwordEl = document.getElementById("Loginpassword");
 
-  
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  const found = users.find(user => user.Loginusername === username && user.Loginpassword === Loginpassword);
-  if (found) {
-    alert("Login successful!");
-  } else {
-    alert("Invalid username or password");
+  if (!usernameEl || !passwordEl ) {
+    alert("Login form fields are missing.");
+    return false;
   }
 
-  localStorage.setItem("loggedIn", "true");
+  const identifier = usernameEl.value.trim(); // allow username or email
+  const password = passwordEl.value;
+
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const found = users.find(user =>
+    (user.username === identifier || user.email === identifier) &&
+    user.password === password
+  );
+
+  function goTo(pageName) {
+    // If current page is inside /pages/, navigate to same folder; otherwise go into pages/
+    return location.pathname.includes('/pages/') ? `${pageName}.html` : `pages/${pageName}.html`;
+  }
+
+  if (found) {
+    localStorage.setItem("loggedInUser", found.username);
+    localStorage.setItem("loggedIn", "true");
+    alert("Login successful!");
+    window.location.href = goTo('design');
+    return true;
+  } else {
+    alert("Invalid username or password");
+    return false;
+  }
 }
 
-function searchSite() {
+function searchSite() 
+{
     let input = document.getElementById("searchInput").value.toLowerCase();
     let pages = {
         "home": "index.html",
@@ -68,7 +110,7 @@ function searchSite() {
         "contact": "pages/contact.html",
         "design": "pages/design.html",
         "orders": "pages/orders.html",
-        "eco": "pages/EcoEdu.html",
+        "ecoedu": "pages/EcoEdu.html",
         "enquiry": "pages/Enquiry.html",
         "register": "pages/register.html"
     };

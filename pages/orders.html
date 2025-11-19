@@ -24,9 +24,9 @@
 
         <a href="EcoEdu.html">Eco-Education</a>
         <a href="contact.html">CONTACT US</a>
+        
         <input type="text" id="searchInput">
-        <button onclick="searchSite()">Search</button>
-          
+        <button onclick="searchSite()">Search</button>  
     </nav>
 
     <div class="brand">
@@ -107,7 +107,8 @@
 
 <!-- CART SCRIPT — FULL FUNCTION BELOW -->
 <script>
-    function loadCart() {
+    function loadCart() 
+    {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let table = document.getElementById("cartTable");
 

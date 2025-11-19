@@ -13,23 +13,25 @@
         <nav>
             <a href="../index.html">HOME</a>
             <a href="about.html">ABOUT US</a>
+            
             <select onchange="location = this.value;">
              <option value="">Services</option>
              <option value="design.html">Design</option>
              <option id="ordersOption" value="orders.html" disabled>Orders</option>
             </select>
+            
             <a href="EcoEdu.html">Eco-Education</a>
-             <a href="contact.html">CONTACT US</a>
+            <a href="contact.html">CONTACT US</a>
+            
             <input type="text" id="searchInput">
             <button onclick="searchSite()">Search</button>
-          
-            </nav>
+        </nav>
 
         <div class="brand">
-         <div style="text-align: center;">
-          <div>FASHION APPAREL</div>
-          <div class="muted">Modern clothing & essentials</div>
-         </div>
+          <div style="text-align: center;">
+           <div>FASHION APPAREL</div>
+           <div class="muted">Modern clothing & essentials</div>
+          </div>
         </div>
     </header>
     
@@ -38,7 +40,8 @@
             <div class="hero-inner">
                 <h1>About Us</h1>
                 <p class="lead">FashionApparel is dedicated to providing modern clothing essentials with a focus on 
-                    quality and thoughtful design.</p>
+                    quality and thoughtful design.
+                </p>
             </div>
             <div class="hero-image" aria-hidden="true">
                 <img src="../assets/photo-1506748686214-e9df14d4d9d0.avif" alt="Fashion apparel image" width="400" height="400"/>
@@ -53,7 +56,8 @@
             <p>
                 At FashionApparel, we believe in creating clothing that combines comfort, style, and sustainability.
                 Our mission is to provide high-quality apparel that meets the needs of our customers while being mindful
-                of our impact on the environment.</p>
+                of our impact on the environment.
+            </p>
         </section>
 
         <section class="section">
@@ -140,7 +144,8 @@
 <p id="liveTime"></p>
 
 <script>
-function updateTime() {
+function updateTime() 
+{
   const now = new Date();
   document.getElementById("liveTime").textContent = 
     "Current Time: " + now.toLocaleTimeString();
@@ -148,7 +153,6 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 </script>
-
 
 </body>
 </html>

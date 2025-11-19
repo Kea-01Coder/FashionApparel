@@ -11,28 +11,30 @@
 <body>
   <header>
     <img src="assets/LOGO.png" alt="Logo" width="100" height="100">
-        <nav>
-          
-      <a href="index.html">HOME</a>
-      <a href="pages/about.html">ABOUT US</a> 
-    <select onchange="location = this.value;">
-      <option value="">Services</option>
-      <option value="pages/design.html">Design</option>
-      <option id="ordersOption" value="pages/orders.html" disabled>Orders</option>
-    </select>
-    <a href="pages/EcoEdu.html">Eco-Education</a>
-    <a href="pages/contact.html">CONTACT US</a>
-    <a href="pages/Enquiry.html">Enquiry</a>
-          <input type="text" id="searchInput">
-          <button onclick="searchSite()">Search</button>
-    </nav>
+        <nav>    
+        <a href="index.html">HOME</a>
+        <a href="pages/about.html">ABOUT US</a> 
+      
+        <select onchange="location = this.value;">
+         <option value="">Services</option>
+         <option value="pages/design.html">Design</option>
+         <option id="ordersOption" value="pages/orders.html" disabled>Orders</option>
+        </select>
+      
+        <a href="pages/EcoEdu.html">Eco-Education</a>
+        <a href="pages/contact.html">CONTACT US</a>
+        <a href="pages/Enquiry.html">Enquiry</a>
+        
+        <input type="text" id="searchInput">
+        <button onclick="searchSite()">Search</button>
+     </nav>
     <div class="brand">
         <div style="text-align: center;">
           <div>FASHION APPAREL</div>
           <div class="muted">Modern clothing & essentials</div>
         </div>
       </div>
-      </header>
+  </header>
 
       <!-- Homepage Banner -->
       <div class="home-banner">
@@ -55,56 +57,45 @@
         <img id="lightboxImg">
       </div>
 
-      <section class="section">
-  <div class="section-head">
-      <button onclick="openModal()">Click for Special Offer</button>
-      <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <h2>Special Promotion</h2>
-        <p>Get 20% OFF on all eco-friendly clothing today!</p>
-      </div>
-      </div>
-      
-  <br>
-    <button class="join-btn">
-      <a href="pages/register.html">Join Us</a>
-    </button>
-  </div>
-</section>
-
-
-    
+        <button onclick="openModal()">Click for Special Offer</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2>Special Promotion</h2>
+            <p>Get 20% OFF on all eco-friendly clothing today!</p>
+            <button class="join-btn">
+              <a href="pages/register.html">Join Us</a>
+            </button>
+          </div>
+        </div>
+   
 <!--Login form-->
-<form method="post" onsubmit="return login()">
-        <h2>Log In</h2>
-        <table>
-            <tr>
-                <td>
-                  <label for="username">Username:</label>
-                  <input type="text" id="Loginusername" name="username" required>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <label for="email">Email:</label>
-                  <input type="email" id="Loginemail" name="email" required>  
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <label for="password">Password:</label>
-                  <input type="password" id="Loginpassword" name="password" required> 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                   <button type="submit">Log In</button>  
-                </td>
-            </tr>
-        </table>
+<form onsubmit="return login(event)">
+  <h2>Log In</h2>
+    <table>
+      <tr>
+        <td>
+          <label for="username">Username or E-mail:</label>
+          <input type="text" id="Loginusername" name="username" required>  
+        </td>
+      </tr>
         
-    </form>
+      <tr>
+        <td>
+          <label for="password">Password:</label>
+          <input type="password" id="Loginpassword" name="password" required> 
+        </td>
+      </tr>
+            
+      <tr>
+        <td>
+          <button type="submit">Log In</button>  
+        </td>
+      </tr>
+    </table>
+        
+  </form>
+
   <br>
   <br>
 
@@ -122,15 +113,17 @@
     </div>
   </footer>
 
-<script src="./Users.js"></script>
+<script src="Users.js"></script>
 
 <script>
-function openLightbox(imageSrc) {
+function openLightbox(imageSrc) 
+{
   document.getElementById("lightboxImg").src = imageSrc;
   document.getElementById("lightbox").style.display = "flex";
 }
 
-function closeLightbox() {
+function closeLightbox() 
+{
   document.getElementById("lightbox").style.display = "none";
 }
 </script>
