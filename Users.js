@@ -1,72 +1,79 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('registerForm');
-    const errorMessage = document.getElementById('error-message');
+function initUsers() {
+  const form = document.getElementById('registerForm');
+  const errorMessage = document.getElementById('error-message');
 
-    if(form){
-        form.addEventListener('submit', function(e) {
-        e.preventDefault(); // prevent default form submission
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-        const username = document.getElementById('username').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value.trim();
+      const username = (document.getElementById('username')?.value || '').trim();
+      const email = (document.getElementById('email')?.value || '').trim();
+      const password = (document.getElementById('password')?.value || '').trim();
 
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+      // clear previous
+      if (errorMessage) { errorMessage.textContent = ''; errorMessage.hidden = true; }
 
-        if (!emailPattern.test(email)) {
-            errorMessage.textContent = 'Incorrect email format.';
-            return false;
+      if (!username || !email || !password) {
+        if (errorMessage) { errorMessage.textContent = 'All fields are required.'; errorMessage.hidden = false; }
+        else alert('All fields are required.');
+        return false;
+      }
+
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
+      if (!emailPattern.test(email)) {
+        if (errorMessage) { errorMessage.textContent = 'Incorrect email format.'; errorMessage.hidden = false; }
+        else alert('Incorrect email format.');
+        return false;
+      }
+
+      if (!passwordPattern.test(password)) {
+        if (errorMessage) {
+          errorMessage.textContent = 'Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.';
+          errorMessage.hidden = false;
+        } else {
+          alert('Weak password.');
         }
+        return false;
+      }
 
-        if (!passwordPattern.test(password)) {
-            errorMessage.textContent = 'Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character.';
-            return false;
-        }
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      if (users.find(u => u.email === email)) {
+        if (errorMessage) { errorMessage.textContent = 'Email already registered.'; errorMessage.hidden = false; }
+        else alert('Email already registered.');
+        return false;
+      }
+      if (users.find(u => u.username === username)) {
+        if (errorMessage) { errorMessage.textContent = 'Username already taken.'; errorMessage.hidden = false; }
+        else alert('Username already taken.');
+        return false;
+      }
 
-        errorMessage.textContent = '';
+      users.push({ username, email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem(username + '_cart', JSON.stringify([]));
 
-        // Get users and check duplicates
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        const existingUser = users.find(user => user.email === email);
-        const existingUsername = users.find(user => user.username === username);
-        if (existingUser) {
-            window.alert = 'Email already registered.';
-            return false;
-        }
-        if (existingUsername) {
-            window.alert = 'Username already taken.';
-            return false;
-        }
-
-        // Save user
-        users.push({ username, email, password });
-        localStorage.setItem('users', JSON.stringify(users));
-        localStorage.setItem(username + "_cart", JSON.stringify([])); // optional cart
-
-        alert('Registration successful!');
-        window.location.href = "registered.html"; // redirect AFTER alert
+      if (errorMessage) { errorMessage.textContent = ''; errorMessage.hidden = true; }
+      alert('Registration successful!');
+      window.location.href = 'registered.html';
+      return true;
     });
-} else{
-    console.warn("Register form not found on this page.");
+  } else {
+    console.warn('registerForm not found on this page.');
+  }
+
+  // safely enable/disable orders option
+  const ordersOption = document.getElementById('ordersOption');
+  const user = localStorage.getItem('loggedInUser');
+  if (ordersOption) ordersOption.disabled = !user;
 }
-
-    // When a user logs in — move this here so element exists
-    const usernameField = document.getElementById("username");
-    if (usernameField) {
-        let currentUser = usernameField.value || '';
-        if (currentUser) {
-            localStorage.setItem("loggedInUser", currentUser);
-        }
-    }
-
-    // Enable/disable orders option safely
-    const ordersOption = document.getElementById("ordersOption");
-    const user = localStorage.getItem("loggedInUser");
-    if (ordersOption) {
-        ordersOption.disabled = !user;
-    }
-
-});
+// initialize now or on DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initUsers);
+} else {
+  initUsers();
+}
 
 function login(event) 
 {
