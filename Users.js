@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 } else{
     console.warn("Register form not found on this page.");
 }
+
     // When a user logs in — move this here so element exists
     const usernameField = document.getElementById("username");
     if (usernameField) {
@@ -103,9 +104,17 @@ function login(event)
 
 function searchSite() 
 {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let pages = {
-        "home": "index.html",
+    const inputEl = document.getElementById("searchInput");
+    const raw = inputEl ? inputEl.value : "";
+    const input = raw.trim().toLowerCase();
+
+    if (!input) {
+        alert("Enter a search term.");
+        return;
+    }
+
+    const pages = {
+        "home": "../index.html",
         "about": "pages/about.html",
         "contact": "pages/contact.html",
         "design": "pages/design.html",
@@ -115,9 +124,33 @@ function searchSite()
         "register": "pages/register.html"
     };
 
-    for (let key in pages) {
-        if (input.includes(key)) {
-            window.location.href = pages[key];
+    function resolvePath(target) {
+        // If current page is inside /pages/, strip "pages/" from target paths that include it
+        if (location.pathname.includes("/pages/")) {
+            return target.startsWith("pages/") ? target.slice(6) : target;
+        }
+        return target;
+    }
+
+    // exact key match
+    if (pages[input]) {
+        window.location.href = resolvePath(pages[input]);
+        return;
+    }
+
+    // key substring or path contains input
+    for (const [key, path] of Object.entries(pages)) {
+        if (key.includes(input) || path.toLowerCase().includes(input)) {
+            window.location.href = resolvePath(path);
+            return;
+        }
+    }
+
+    // fallback: partial word match (e.g., "about us" -> "about")
+    for (const [key, path] of Object.entries(pages)) {
+        const words = key.split(/[\W_]+/);
+        if (words.some(w => w.startsWith(input) || w.includes(input))) {
+            window.location.href = resolvePath(path);
             return;
         }
     }
@@ -125,37 +158,23 @@ function searchSite()
     alert("No matching page found.");
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-    const user = localStorage.getItem("loggedInUser");
-    const ordersOption = document.getElementById("ordersOption");
-
-    if (user) {
-        ordersOption.disabled = false; // enable Orders
-    } else {
-        ordersOption.disabled = true;  // keep Orders locked
-    }
-});
-
 // When a user logs in
 let currentUser = document.getElementById("username").value;
 localStorage.setItem("loggedInUser", currentUser);
 
 // When adding to cart
 function addToCart(item) {
-    let user = localStorage.getItem("loggedInUser");
+    const user = localStorage.getItem("loggedInUser");
     if (!user) {
         alert("Please log in first!");
         return;
     }
 
-    // Get user's cart
-    let cart = JSON.parse(localStorage.getItem(user + "_cart")) || [];
-
-    // Add item
+    const key = user + "_cart";
+    const cart = JSON.parse(localStorage.getItem(key)) || [];
     cart.push(item);
-
-    // Save back to localStorage
-    localStorage.setItem(user + "_cart", JSON.stringify(cart));
+    localStorage.setItem(key, JSON.stringify(cart));
+    return true;
 }
 
 
