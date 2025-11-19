@@ -126,7 +126,7 @@ function searchSite()
     }
 
     const pages = {
-        "home": "index.html",
+        "home": "../index.html",
         "about": "pages/about.html",
         "contact": "pages/contact.html",
         "design": "pages/design.html",
