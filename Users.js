@@ -28,8 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get users and check duplicates
         let users = JSON.parse(localStorage.getItem('users')) || [];
         const existingUser = users.find(user => user.email === email);
+        const existingUsername = users.find(user => user.username === username);
         if (existingUser) {
-            errorMessage.textContent = 'Email already registered.';
+            window.alert = 'Email already registered.';
+            return false;
+        }
+        if (existingUsername) {
+            window.alert = 'Username already taken.';
             return false;
         }
 
@@ -114,7 +119,7 @@ function searchSite()
     }
 
     const pages = {
-        "home": "../index.html",
+        "home": "index.html",
         "about": "pages/about.html",
         "contact": "pages/contact.html",
         "design": "pages/design.html",

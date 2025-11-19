@@ -31,7 +31,7 @@
         <a href="EcoEdu.html">Eco-Education</a>
         <a href="contact.html">CONTACT US</a>
         
-        <input type="text" id="searchInput">
+        <input type="text" id="searchInput" placeholder="Search...">
         <button onclick="searchSite()">Search</button>  
     </nav>
 
@@ -43,7 +43,6 @@
     </div>
 </header>
 
-
 <!-- MAIN PAGE CONTENT -->
 <div class="container">
     <h2>Checkout</h2>
@@ -51,51 +50,50 @@
     <!-- CART SECTION -->
     <div class="section">
         <h3>Your Cart</h3>
-
         <table id="cartTable">
             <tr>
-                <th>Item </th>
-                <th>Image </th>
-                <th>Size </th>
-                <th>Quantity </th>
-                <th>Price </th>
-                <th>Subtotal </th>
+                <th>Item</th>
+                <th>Image</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+                <th>Action</th>
             </tr>
         </table>
     </div>
 
-
     <!-- SHIPPING INFO -->
     <div class="section">
         <h3>Shipping Information</h3>
-        <form>
+        <form id="shippingForm" onsubmit="return validateform()">
+            <div id="shipping-error" role="alert" hidden style="color:#c00;margin-bottom:8px;"></div>
             <table>
-                <tr><td><label>Full Name <input type="text"></label></td></tr>
-                <tr><td><label>Address <input type="text"></label></td></tr>
-                <tr><td><label>City <input type="text"></label></td></tr>
-                <tr><td><label>Postal Code <input type="text"></label></td></tr>
-                <tr><td><label>Country <input type="text"></label></td></tr>
-                <tr><td><label>Phone <input type="text"></label></td></tr>
+                <tr><td><label>Full Name <input type="text" id="Name" required></label></td></tr>
+                <tr><td><label>Address <input type="text" id="Address" required></label></td></tr>
+                <tr><td><label>City <input type="text" id="City" required></label></td></tr>
+                <tr><td><label>Postal Code <input type="text" id="PostalCode" required></label></td></tr>
+                <tr><td><label>Country <input type="text" id="Country" required></label></td></tr>
+                <tr><td><label>Phone <input type="text" id="Phone" required></label></td></tr>
             </table>
         </form>
     </div>
-
 
     <!-- PAYMENT INFO -->
     <div class="section">
         <h3>Payment Information</h3>
-        <form>
+        <form id="paymentForm" onsubmit="return validatePayment()">
+            <div id="payment-error" role="alert" hidden style="color:#c00;margin-bottom:8px;"></div>
             <table>
-                <tr><td><label>Card Number <input type="text"></label></td></tr>
-                <tr><td><label>Expiry Date <input type="text" placeholder="MM/YY"></label></td></tr>
-                <tr><td><label>CVV <input type="text"></label></td></tr>
+                <tr><td><label>Card Number <input type="text" id="CardNumber" required></label></td></tr>
+                <tr><td><label>Expiry Date <input type="text" id="ExpiryDate" placeholder="MM/YY" required></label></td></tr>
+                <tr><td><label>CVV <input type="text" id="CVV" required></label></td></tr>
             </table>
         </form>
     </div>
 
-    <button type="submit"><a href="OrderSuccess.html">Place Order</a></button>
+    <button type="button" id="placeOrderBtn" onclick="placeOrder()">Place Order</button>
 </div>
-
 
 <footer>
     <div class="container footer-grid">
@@ -103,7 +101,6 @@
             <div style="font-weight:800">FashionApparel</div>
             <div class="muted">Simple clothing, thoughtful design.</div>
         </div>
-
         <div style="text-align:center">
             <div class="muted">&copy; FashionApparel 2025</div>
             <div style="margin-top:8px">Follow us: Instagram • Facebook • X</div>
@@ -111,13 +108,16 @@
     </div>
 </footer>
 
-<!-- CART SCRIPT — FULL FUNCTION BELOW -->
 <script>
-    function loadCart() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        let table = document.getElementById("cartTable");
+    // Load cart when the page loads
+    window.onload = function() {
+        loadCart();
+    };
 
-        // Reset table (keep header)
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const table = document.getElementById("cartTable");
+
         table.innerHTML = `
             <tr>
                 <th>Item</th>
@@ -126,62 +126,175 @@
                 <th> Quantity</th>
                 <th> Price</th>
                 <th> Subtotal</th>
+                <th> Action</th>
             </tr>
         `;
 
         let total = 0;
-
         if (cart.length === 0) {
-            // Handle empty cart case
             table.innerHTML += `
                 <tr>
-                    <td colspan="6" style="text-align:center;">Your cart is empty.</td>
+                    <td colspan="7" style="text-align:center;">Your cart is empty.</td>
                 </tr>
             `;
-            return; // Exit the function if the cart is empty
+            return;
         }
 
-        cart.forEach(item => {
-            let rawPrice = item.price.toString().replace("R", "");
-            let priceValue = parseFloat(rawPrice);
-            let subtotal = priceValue * item.quantity; // Use item.quantity instead of item.qty
+        cart.forEach((item, index) => {
+            const qty = Number(item.quantity ?? item.qty ?? 1);
+            const rawPrice = String(item.price ?? "0").replace(/[^0-9.]/g, "");
+            const priceValue = parseFloat(rawPrice) || 0;
+            const subtotal = priceValue * qty;
             total += subtotal;
 
             table.innerHTML += `
                 <tr>
-                    <td>${item.name}</td>
-                    <td> <img src="${item.image}" width="60"></td>
-                    <td> ${item.size}</td>
-                    <td> ${item.quantity}</td>
-                    <td> ${item.price}</td>
-                    <td> R${subtotal.toFixed(2)}</td> <!-- Format subtotal to 2 decimal places -->
-                    <td> <button onclick="removeFromCart(${cart.indexOf(item)})">Remove</button></td>
+                    <td>${item.name || ''}</td>
+                    <td><img src="${item.image || ''}" width="60" alt=""></td>
+                    <td>${item.size || ''}</td>
+                    <td>${qty}</td>
+                    <td>${item.price || 'R0.00'}</td>
+                    <td>R${subtotal.toFixed(2)}</td>
+                    <td><button type="button" onclick="removeFromCart(${index})">Remove</button></td>
                 </tr>
             `;
         });
 
-        // TOTAL ROW
         table.innerHTML += `
             <tr>
-                <td colspan="5" class="total">Total</td>
-                <td class="total">R${total.toFixed(2)}</td> <!-- Format total to 2 decimal places -->
+                <td colspan="6" class="total">Total</td>
+                <td class="total">R${total.toFixed(2)}</td>
             </tr>
         `;
     }
 
-    // LOAD CART WHEN PAGE OPENS
-    loadCart();
-</script>
-
-<script>
     function removeFromCart(index) {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.splice(index, 1); // Remove item at index
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (index < 0 || index >= cart.length) return;
+        cart.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
-        loadCart(); // Refresh cart display
+        loadCart();
     }
 
+    function validateform() {
+      const errorEl = document.getElementById("shipping-error");
+      if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
+
+      const Name = (document.getElementById("Name").value || "").trim();
+      const Address = (document.getElementById("Address").value || "").trim();
+      const City = (document.getElementById("City").value || "").trim();
+      const PostalCode = (document.getElementById("PostalCode").value || "").trim();
+      const Country = (document.getElementById("Country").value || "").trim();
+      const Phone = (document.getElementById("Phone").value || "").trim();
+
+      if (!Name || !Address || !City || !PostalCode || !Country || !Phone) {
+        if (errorEl) {
+            errorEl.textContent = "All shipping fields are required.";
+            errorEl.hidden = false;
+            return false;
+        } else {
+            alert("All fields are required.");
+            return false;
+        }
+      }
+
+      const PhoneRegex = /^(?:\+27|0)\d{9}$/;
+      if (!PhoneRegex.test(Phone)) {
+          if (errorEl) {
+              errorEl.textContent = "Enter a valid phone number (e.g. 0812345678 or +27812345678)";
+              errorEl.hidden = false;
+          } else {
+              alert("Enter a valid phone number (e.g. 0812345678 or +27812345678)");
+          }
+          return false;
+      }
+
+      if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
+      return true;
+    }
+
+    function validatePayment() {
+    const errorEl = document.getElementById("payment-error");
+    // Clear previous error
+    if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
+
+    const CardNumber = document.getElementById("CardNumber").value;
+    const ExpiryDate = document.getElementById("ExpiryDate").value;
+    const CVV = document.getElementById("CVV").value; 
+
+    const cardNumberRegex = /^\d{16}$/;
+    const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+    const cvvRegex = /^\d{3}$/;
+
+    if (!cardNumberRegex.test(CardNumber)) {
+        if (errorEl) {
+            errorEl.textContent = "Enter a valid 16-digit card number.";
+            errorEl.hidden = false;
+        } else {
+            alert("Enter a valid 16-digit card number.");
+        }
+        return false;
+    }
+
+    if (!expiryDateRegex.test(ExpiryDate)) {
+        if (errorEl) {
+            errorEl.textContent = "Enter a valid expiry date in MM/YY format.";
+            errorEl.hidden = false;
+        } else {
+            alert("Enter a valid expiry date in MM/YY format.");
+        }
+        return false;
+    }
+
+    if (!cvvRegex.test(CVV)) {
+        if (errorEl) {
+            errorEl.textContent = "Enter a valid 3-digit CVV.";
+            errorEl.hidden = false;
+        } else {
+            alert("Enter a valid 3-digit CVV.");
+        }
+        return false;
+    }
+
+    if (CardNumber === "" || ExpiryDate === "" || CVV === "") {
+        if (errorEl) {
+            errorEl.textContent = "All payment fields are required.";
+            errorEl.hidden = false;
+        } else {
+            alert("All payment fields are required.");
+        }
+        return false;
+    } else {
+        // Clear error and proceed
+        if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
+        alert("Payment information is valid.");
+        return true; 
+    }
+}
+
+    function placeOrder() {
+        // run shipping validation first
+        const shippingOk = validateform();
+        if (!shippingOk) 
+        {
+          alert("Please correct shipping information before placing order.");
+          return false;   
+        }
+
+        // run payment validation next
+        const paymentOk = validatePayment();
+        if (!paymentOk) 
+        {
+            alert("Please correct payment information before placing order.");
+            return false;
+        }
+        
+        // navigate to success page (same folder)
+        window.location.href = 'OrderSuccess.html';
+        return true;
+    }
 </script>
+
 <script src="../Users.js"></script>
 
 </body>
