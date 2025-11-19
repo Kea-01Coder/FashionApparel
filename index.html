@@ -57,17 +57,17 @@
         <img id="lightboxImg">
       </div>
 
-        <button onclick="openModal()">Click for Special Offer</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2>Special Promotion</h2>
-            <p>Get 20% OFF on all eco-friendly clothing today!</p>
-            <button class="join-btn">
-              <a href="pages/register.html">Join Us</a>
-            </button>
-          </div>
+      <button class="modal-trigger" onclick="openModal()">Special Offer</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close" onclick="closeModal()">&times;</span>
+          <h2>Special Promotion</h2>
+          <p>Get 20% OFF on all eco-friendly clothing today!</p>
+          <button class="join-btn">
+            <a href="pages/register.html">Join Us</a>
+          </button>
         </div>
+      </div>
    
 <!--Login form-->
 <form onsubmit="return login(event)">

@@ -150,23 +150,6 @@ function searchSite()
         return;
     }
 
-    // key substring or path contains input
-    for (const [key, path] of Object.entries(pages)) {
-        if (key.includes(input) || path.toLowerCase().includes(input)) {
-            window.location.href = resolvePath(path);
-            return;
-        }
-    }
-
-    // fallback: partial word match (e.g., "about us" -> "about")
-    for (const [key, path] of Object.entries(pages)) {
-        const words = key.split(/[\W_]+/);
-        if (words.some(w => w.startsWith(input) || w.includes(input))) {
-            window.location.href = resolvePath(path);
-            return;
-        }
-    }
-
     alert("No matching page found.");
 }
 
@@ -188,7 +171,6 @@ function addToCart(item) {
     localStorage.setItem(key, JSON.stringify(cart));
     return true;
 }
-
 
 function displayCart() {
     let user = localStorage.getItem("loggedInUser");
