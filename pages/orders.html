@@ -6,6 +6,12 @@
     <title>Order</title>
     <link rel="icon" href="../assets/LOGO.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #cartTable td, #cartTable th {
+            padding: 10px; /* Adjust the value as needed */
+            text-align: left; /* Optional: Align text to the left */
+        }
+    </style>
 </head>
 
 <body>
@@ -107,8 +113,7 @@
 
 <!-- CART SCRIPT — FULL FUNCTION BELOW -->
 <script>
-    function loadCart() 
-    {
+    function loadCart() {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let table = document.getElementById("cartTable");
 
@@ -126,12 +131,21 @@
 
         let total = 0;
 
+        if (cart.length === 0) {
+            // Handle empty cart case
+            table.innerHTML += `
+                <tr>
+                    <td colspan="6" style="text-align:center;">Your cart is empty.</td>
+                </tr>
+            `;
+            return; // Exit the function if the cart is empty
+        }
+
         cart.forEach(item => {
             let rawPrice = item.price.toString().replace("R", "");
             let priceValue = parseFloat(rawPrice);
-            let subtotal = priceValue * item.qty;
+            let subtotal = priceValue * item.quantity; // Use item.quantity instead of item.qty
             total += subtotal;
-
 
             table.innerHTML += `
                 <tr>
@@ -140,7 +154,8 @@
                     <td> ${item.size}</td>
                     <td> ${item.quantity}</td>
                     <td> ${item.price}</td>
-                    <td> R${subtotal}</td>
+                    <td> R${subtotal.toFixed(2)}</td> <!-- Format subtotal to 2 decimal places -->
+                    <td> <button onclick="removeFromCart(${cart.indexOf(item)})">Remove</button></td>
                 </tr>
             `;
         });
@@ -149,7 +164,7 @@
         table.innerHTML += `
             <tr>
                 <td colspan="5" class="total">Total</td>
-                <td class="total">R${total}</td>
+                <td class="total">R${total.toFixed(2)}</td> <!-- Format total to 2 decimal places -->
             </tr>
         `;
     }
@@ -157,7 +172,17 @@
     // LOAD CART WHEN PAGE OPENS
     loadCart();
 </script>
-<script src="Users.js"></script>
+
+<script>
+    function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1); // Remove item at index
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart(); // Refresh cart display
+    }
+
+</script>
+<script src="../Users.js"></script>
 
 </body>
 </html>

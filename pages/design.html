@@ -894,7 +894,7 @@
             <h4 class="product-title">A Light Khaki Jacket</h4>
             <div class="product-price">R1020</div>
             <p class="product-desc">Jacket that serves as a jersey and a raincoat</p>
-            <div class="product-quantity"><label>Quantity<input type="text"></label></div>
+            <div class="product-quantity"><label>Quantity<input type="text" ></label></div>
 
             <label for="size">Size:</label>
             <select class="product-size">
@@ -946,7 +946,7 @@
   </div>
 </footer>
     
-  <script src="../User.js"></script>
+  <script src="../Users.js"></script>
   
   <p id="liveTime"></p>
 
@@ -972,23 +972,23 @@
   </script>
 
   <script>
-  function addToCart(button) {
+  function addToCart(button) 
+  {
     const card = button.closest(".card");
+    const qtyInput = card.querySelector(".product-quantity input");
+    const qty = Math.max(1, parseInt(qtyInput?.value) || 1); // default to 1
 
     const product = {
-      name: card.querySelector(".product-title").textContent,
-      price: card.querySelector(".product-price").textContent,
+      name: card.querySelector(".product-title").textContent.trim(),
+      price: card.querySelector(".product-price").textContent.trim(),
       image: card.querySelector("img").src,
       size: card.querySelector(".product-size").value,
-      quantity: card.querySelector(".product-quantity").value
+      quantity: qty
     };
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(product);
-
     localStorage.setItem("cart", JSON.stringify(cart));
-
     window.location.href = "orders.html";
   }
 </script>
