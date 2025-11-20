@@ -1,10 +1,11 @@
 function initUsers() {
+    // registration form handling
   const form = document.getElementById('registerForm');
   const errorMessage = document.getElementById('error-message');
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
+      e.preventDefault(); // prevent form submission
 
       const username = (document.getElementById('username')?.value || '').trim();
       const email = (document.getElementById('email')?.value || '').trim();
@@ -38,6 +39,7 @@ function initUsers() {
         return false;
       }
 
+      // check for existing users
       const users = JSON.parse(localStorage.getItem('users')) || [];
       if (users.find(u => u.email === email)) {
         if (errorMessage) { errorMessage.textContent = 'Email already registered.'; errorMessage.hidden = false; }
@@ -116,6 +118,7 @@ function login(event)
 
 function searchSite() 
 {
+    // get and process input
     const inputEl = document.getElementById("searchInput");
     const raw = inputEl ? inputEl.value : "";
     const input = raw.trim().toLowerCase();
